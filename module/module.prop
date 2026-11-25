@@ -4,3 +4,4 @@ version=v1.3.1
 versionCode=131
 author=KreneNov & Elaina
 description=Hardware-level performance, thermal & True Bypass charging optimizer for Xiaomi 14 (houji) with Gaming Auto-Bypass, Per-Game Profiles, pure-RAM ZRAM + SPC tuning, and animated KSU WebUI.
+updateJson=https://raw.githubusercontent.com/KreneNov/X14-Optimizer/main/update.json

@@ -1,0 +1,61 @@
+name: Báo lỗi / Bug Report
+description: Báo cáo sự cố khi sử dụng X14 Optimizer trên Xiaomi 14 (houji)
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Vui lòng điền đầy đủ thông tin thiết bị và đính kèm log để việc kiểm tra được nhanh nhất.
+
+  - type: input
+    id: module_version
+    attributes:
+      label: Phiên bản X14 Optimizer
+      placeholder: "Ví dụ: v1.3.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: rom_type
+    attributes:
+      label: Phiên bản ROM đang dùng
+      options:
+        - HyperOS Stock (China / Global)
+        - HyperUR / ROM Mod
+        - Xiaomi.EU
+        - AOSP / Custom ROM khác
+    validations:
+      required: true
+
+  - type: dropdown
+    id: root_manager
+    attributes:
+      label: Trình quản lý Root
+      options:
+        - KernelSU
+        - KernelSU Next
+        - APatch
+        - Magisk
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Mô tả lỗi & Các bước tái hiện
+      description: Lỗi xảy ra ở tính năng nào (Gaming Auto-Bypass, Per-Game Profile, ZRAM, WebUI...)?
+      placeholder: "Ví dụ: Cắm sạc 90W vào game Liên Quân nhưng dòng sạc không về 0 mA..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log hoạt động của module
+      description: |
+        Mở Termux chạy lệnh sau rồi dán kết quả vào đây:
+        `su -c 'tail -n 60 /data/local/tmp/x14_perf_battery.log'`
+      render: shell
+    validations:
+      required: true
