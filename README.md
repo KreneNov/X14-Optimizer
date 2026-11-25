@@ -14,6 +14,16 @@ Hardware-level performance, thermal management, True Bypass charging, and pure-R
 
 
 
+\## Screenshots
+
+
+
+| Overview | App Picker Modal | Per-Game Profiles | Battery |
+
+| :---: | :---: | :---: | :---: |
+
+| <img src="docs/screenshots/overview.jpg" width="210" /> | <img src="docs/screenshots/pick.jpg" width="210" /> | <img src="docs/screenshots/mode.jpg" width="210" /> | <img src="docs/screenshots/battery.jpg" width="210" /> |
+
 \---
 
 
