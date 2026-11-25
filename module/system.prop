@@ -1,0 +1,9 @@
+# Xiaomi 14 (houji) - Disable Android 15/16 default 60FPS game frame-rate cap
+# Disable HyperOS thermal refresh-rate throttling (Thermal Guard handles safety)
+debug.graphics.game_default_frame_rate.disabled=true
+ro.vendor.fps.switch.thermal=false
+
+# Loosen HyperOS Smart Process Control (keep lmkd intact, no UFS Memory Extension)
+persist.sys.spc.mi_extra_free_game_only=false
+persist.vendor.spc.mi_extra_free_game_only=false
+persist.sys.spc.protect.critical.count=5

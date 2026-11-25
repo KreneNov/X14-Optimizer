@@ -1,0 +1,831 @@
+=== /sys/class/power_supply ===
+total 0
+drwxr-xr-x   2 root root 0 2026-11-24 15:30 .
+drwxr-xr-x 144 root root 0 1970-01-01 08:19 ..
+lrwxrwxrwx   1 root root 0 2026-11-24 15:30 battery -> ../../devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/battery
+lrwxrwxrwx   1 root root 0 2026-11-24 16:27 ucsi-source-psy-soc:qcom,pmic_glink:qcom,ucsi1 -> ../../devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,ucsi/power_supply/ucsi-source-psy-soc:qcom,pmic_glink:qcom,ucsi1
+lrwxrwxrwx   1 root root 0 2026-11-24 15:30 usb -> ../../devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/usb
+lrwxrwxrwx   1 root root 0 2026-11-24 15:30 wireless -> ../../devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/wireless
+
+=== /sys/class/qcom-battery (exists check) ===
+total 0
+drwxr-xr-x   2 root   root      0 2026-11-24 15:30 .
+drwxr-xr-x 144 root   root      0 1970-01-01 08:19 ..
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 adapter_id
+-r--r--r--   1 root   root   4096 2026-11-24 16:06 adapter_svid
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 afp_temp
+-r--r--r--   1 root   root   4096 2026-11-24 16:06 anti_burn
+-r--r--r--   1 root   root   4096 2026-11-24 15:35 apdo_max
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 authentic
+-r--r-----   1 system system 4096 2026-11-24 15:30 average_current
+-r--r-----   1 system system 4096 2026-11-24 15:30 average_temp
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 bap_match
+-r--r--r--   1 root   root   4096 2026-11-24 15:49 batt_capacity_increase
+-r--r--r--   1 system system 4096 2026-11-24 15:30 batt_sn
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 batt_sox
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 battcont_online
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 battmoni_isc
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 battmoni_soa
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_battery_present
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_battery_temp
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_battery_voltage
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_bus_current
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_bus_delta
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_bus_voltage
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_chip_ok
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_slave_battery_present
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_slave_bus_current
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_slave_chip_ok
+-rw-r--r--   1 system system 4096 2026-11-24 15:30 bt_state
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 calc_rvalue
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 cc1
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 cc2
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 cc_orientation
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 cc_short_vbus
+-rw-rw----   1 system system 4096 2026-11-24 15:30 cc_toggle
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 cell_vendor
+-r--r--r--   1 root   root   4096 2026-11-24 16:06 charge_absoc
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 charge_control_en
+-rw-rw----   1 system system 4096 2026-11-24 15:30 charger_user_value_map
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 chip_ok
+-r--r-----   1 system system 4096 2026-11-24 15:30 cid_status
+-rw-rw----   1 system system 4096 2026-11-24 15:30 cloud_dynamic_shutdown
+-rw-rw----   1 system system 4096 2026-11-24 15:30 cloud_fod
+-rw-r--r--   1 root   root   4096 2026-11-24 15:30 connector_temp
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 connector_temp2
+-rw-rw----   1 system system 4096 2026-11-24 16:06 constant_power
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 count_level1
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 count_level2
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 count_level3
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 cp_mode
+-r--r-----   1 system system 4096 2026-11-24 15:30 current_deviation
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 current_state
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 dam_ovpgate
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 dis_uart
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 dm
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 dod_count
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 dod_countLT
+--w-------   1 root   root   4096 2026-11-24 16:29 dot_test
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 double85
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 dp
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 fake_cycle
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 fake_soc
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 fake_temp
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 fastchg_mode
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_ai
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_current_max
+-r--r-----   1 system system 4096 2026-11-24 15:30 fg1_cycle
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_df_check
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_fastcharge
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_fcc
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_fcc_soh
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_imax
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_oritemp
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_qmax
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_rm
+-r--r-----   1 system system 4096 2026-11-24 15:30 fg1_rsoc
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 fg1_seal_set
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_seal_state
+-r--r-----   1 system system 4096 2026-11-24 15:30 fg1_soh
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_tambient
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_temp_max
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_tfullq
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_time_ht
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_time_ot
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_tremq
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_tsim
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_vol_max
+-r--r-----   1 system system 4096 2026-11-24 15:30 fg2_soh_sn
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg2_temp_max
+-r--r--r--   1 root   root   4096 2026-11-24 15:31 fg_vendor
+-r--r-----   1 system system 4096 2026-11-24 15:30 get_learn_power
+-r--r-----   1 system system 4096 2026-11-24 15:30 get_learn_power_b
+-r--r-----   1 system system 4096 2026-11-24 15:30 get_learn_power_dev
+-r--r-----   1 system system 4096 2026-11-24 15:30 get_learn_power_dev_b
+-r--r-----   1 system system 4096 2026-11-24 15:30 get_learn_time_dev
+-rw-rw----   1 system system 4096 2026-11-24 15:30 handle_state
+-rw-rw----   1 system system 4096 2026-11-24 15:30 handle_stop_charging
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 has_dp
+-rw-rw----   1 system system 4096 2026-11-24 15:30 input_suspend
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 isc
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 last_node
+--w-------   1 root   root   4096 2026-11-24 16:29 low_fast_para
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 low_inductance_offset
+--w-------   1 root   root   4096 2026-11-24 16:29 lowfast_sw_para
+-rw-r--r--   1 system system 4096 2026-11-24 15:30 lpd_charging
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 lpd_control
+-r--r--r--   1 system system 4096 2026-11-24 15:30 max_life_temp
+-r--r--r--   1 system system 4096 2026-11-24 15:30 max_life_vol
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 maxtemp_occurtime
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 maxtemptime
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 min_life_temp
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 min_life_vol
+-rw-rw-r--   1 system system 4096 2026-11-24 15:30 moisture_detection_en
+-r--r--r--   1 root   root   4096 2026-11-24 16:06 moisture_detection_status
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 mtbf_current
+-rw-rw----   1 system system 4096 2026-11-24 15:30 night_charging
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 ntc_alarm
+-r--r-----   1 system system 4096 2026-11-24 15:30 nvt_referance_current
+-r--r-----   1 system system 4096 2026-11-24 15:30 nvt_referance_power
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 op_mode
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 open_loadsw
+-r--r-----   1 system system 4096 2026-11-24 15:30 otg_ui_support
+-r--r-----   1 system system 4096 2026-11-24 15:30 over_peak_flag
+-r--r--r--   1 system system 4096 2026-11-24 15:30 over_vol_duration
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 pack_vendor
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 pd_verifed
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 pdo2
+-rw-rw-rw-   1 system system 4096 2026-11-24 15:30 plate_shock
+-r--r-----   1 system system 4096 2026-11-24 15:30 power_deviation
+-r--r--r--   1 root   root   4096 2026-11-24 16:17 power_max
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 qbg_curr
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 qmax
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 qmax_cyclecount
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 quick_charge_type
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 real_type
+-rw-rw----   1 system system 4096 2026-11-24 15:30 referance_power
+-r--r-----   1 system system 4096 2026-11-24 15:30 remaining_time
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 remove_temp_limit
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 request_vdm_cmd
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 resistance
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 resistance_id
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 restrict_chg
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 restrict_cur
+-rw-rw----   1 system system 4096 2026-11-24 15:30 reverse_chg_mode
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 reverse_chg_state
+-rw-rw----   1 system system 4096 2026-11-24 15:30 reverse_quick_charge
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 runtime
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 rx_cep
+-rw-rw----   1 system system 4096 2026-11-24 15:30 rx_cr
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 rx_iout
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 rx_offset
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 rx_sleep_mode
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 rx_ss
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 rx_vout
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 rx_vrect
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 sbu1
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 sbu2
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 screen_cctog
+-rw-rw----   1 system system 4096 2026-11-24 16:22 set_learn_power
+-rw-rw----   1 system system 4096 2026-11-24 15:30 set_learn_power_b
+-rw-rw----   1 system system 4096 2026-11-24 15:30 set_rx_sleep
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 ship_mode_en
+-rw-rw----   1 system system 4096 2026-11-24 15:30 shipmode_count_reset
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 shutdown_delay
+-rw-rw----   1 system system 4096 2026-11-24 15:30 smart_batt
+-rw-rw----   1 system system 4096 2026-11-24 15:30 smart_chg
+-rw-r--r--   1 root   root   4096 2026-11-24 16:06 smart_fv
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 smart_sic_mode
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 soc_decimal
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 soc_decimal_rate
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 software_cid
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 soh
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 soh_new
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 soh_sn
+-rw-rw----   1 system system 4096 2026-11-24 15:30 sport_mode
+-rw-rw----   1 system system 4096 2026-11-24 15:30 start_learn
+-rw-rw----   1 system system 4096 2026-11-24 15:30 start_learn_b
+-rw-rw----   1 system system 4096 2026-11-24 15:30 stop_learn
+-rw-rw----   1 system system 4096 2026-11-24 15:30 stop_learn_b
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 thermal_board_temp
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 thermal_remove
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 thermal_scene
+-rw-rw----   1 system system 4096 2026-11-24 15:30 two_ntc_parameter1
+-rw-rw----   1 system system 4096 2026-11-24 15:30 two_ntc_parameter2
+-rw-rw----   1 system system 4096 2026-11-24 15:30 two_ntc_parameter3
+-rw-rw----   1 system system 4096 2026-11-24 15:30 two_ntc_parameter4
+-rw-rw----   1 system system 4096 2026-11-24 15:30 two_ntc_parameter5
+-rw-rw----   1 system system 4096 2026-11-24 15:30 two_ntc_parameter6
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 tx_adapter
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 tx_mac
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 typec_mode
+-rw-rw----   1 system system 4096 2026-11-24 15:30 ui_slave_soh
+-rw-rw----   1 system system 4096 2026-11-24 15:30 ui_soh
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 usb_real_type
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 usb_typec_compliant
+-rw-rw----   1 system usb    4096 2026-11-24 15:30 usbinterface
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 ut_test
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 verify_digest
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 verify_process
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 verify_slave_flag
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 wireless_boost_en
+-rw-rw----   1 system system 4096 2026-11-24 15:30 wireless_chip_fw
+--w-------   1 root   root   4096 2026-11-24 16:29 wireless_fw_crc
+--w-------   1 root   root   4096 2026-11-24 16:29 wireless_fw_force_update
+--w-------   1 root   root   4096 2026-11-24 16:29 wireless_fw_update
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 wireless_fw_update_time_ms
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wireless_fw_version
+-r--r--r--   1 root   root   4096 2026-11-24 15:35 wireless_tx_uuid
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wireless_type
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wireless_version_forcit
+--w-------   1 root   root   4096 2026-11-24 16:29 wls_bin
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wls_car_adapter
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 wls_debug
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wls_die_temp
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wls_fc_flag
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wls_fw_state
+-rw-r--r--   1 root   root   4096 2026-11-24 15:30 wls_quick_chg_control_limit
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 wls_thermal_remove
+-rw-rw----   1 system system 4096 2026-11-24 15:30 wls_tx_speed
+-rw-r--r--   1 root   root   4096 2026-11-24 15:30 wlscharge_control_limit
+--w-------   1 root   root   4096 2026-11-24 16:29 xmfg_fw_bin
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 xmfg_fw_version
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 xmfg_update_region
+
+=== DIR: /sys/class/power_supply/battery (ls -la) ===
+total 0
+drwxr-xr-x 4 root   root      0 2026-11-24 15:30 .
+drwxr-xr-x 5 root   root      0 2026-11-24 15:30 ..
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 capacity
+-rw-r--r-- 1 root   root   4096 2026-11-24 16:29 charge_control_end_threshold
+-rw-r--r-- 1 root   root   4096 2026-11-24 15:30 charge_control_limit
+-r--r--r-- 1 root   root   4096 2026-11-24 16:29 charge_control_limit_max
+-rw-r--r-- 1 root   root   4096 2026-11-24 16:29 charge_control_start_threshold
+-rw-rw---- 1 system system 4096 2026-11-24 15:30 charge_counter
+-rw-rw---- 1 system system 4096 2026-11-24 15:30 charge_full
+-r--r----- 1 system system 4096 2026-11-24 15:30 charge_full_design
+-r--r--r-- 1 root   root   4096 2026-11-24 16:29 charge_type
+-rw-r--r-- 1 root   root   4096 2026-11-24 15:30 constant_charge_current
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 current_avg
+-rw-rw---- 1 system system 4096 2026-11-24 15:30 current_now
+-rw-rw---- 1 system system 4096 2026-11-24 15:30 cycle_count
+lrwxrwxrwx 1 root   root      0 2026-11-24 16:29 device -> ../../../soc:qcom,pmic_glink:qcom,battery_charger
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 health
+-r--r--r-- 1 root   root   4096 2026-11-24 16:29 model_name
+drwxr-xr-x 2 root   root      0 2026-11-24 16:29 power
+-r--r--r-- 1 root   root   4096 2026-11-24 16:29 power_avg
+-r--r--r-- 1 root   root   4096 2026-11-24 16:29 power_now
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 present
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 status
+lrwxrwxrwx 1 root   root      0 2026-11-24 16:29 subsystem -> ../../../../../../../class/power_supply
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 technology
+-rw-rw---- 1 system system 4096 2026-11-24 15:30 temp
+-r--r--r-- 1 root   root   4096 2026-11-24 16:29 time_to_empty_avg
+-r--r--r-- 1 root   root   4096 2026-11-24 16:29 time_to_full_avg
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 time_to_full_now
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 type
+-rw-r--r-- 1 root   root   4096 2026-11-24 16:29 uevent
+-r--r--r-- 1 root   root   4096 2026-11-24 16:29 voltage_max
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 voltage_now
+-r--r--r-- 1 root   root   4096 2026-11-24 16:29 voltage_ocv
+drwxr-xr-x 2 root   root      0 2026-11-24 15:30 wakeup53
+--- VALUES: /sys/class/power_supply/battery ---
+capacity = 89
+charge_control_end_threshold = 0
+charge_control_limit = 5
+charge_control_limit_max = 16
+charge_control_start_threshold = 0
+charge_counter = 2867000
+charge_full = 3353000
+charge_full_design = 4610000
+charge_type = Fast
+constant_charge_current = 4250000
+current_avg = 0
+current_now = -624000
+cycle_count = 1222
+health = Good
+model_name = N3_4610mah_90w
+power_avg = 5000000
+power_now = 10000000
+present = 1
+status = Charging
+technology = Li-poly
+temp = 316
+time_to_empty_avg = 0
+time_to_full_avg = 0
+time_to_full_now = 0
+type = Battery
+uevent = POWER_SUPPLY_NAME=battery POWER_SUPPLY_TYPE=Battery POWER_SUPPLY_STATUS=Charging POWER_SUPPLY_HEALTH=Good POWER_SUPPLY_PRESENT=1 POWER_SUPPLY_CHARGE_TYPE=Fast POWER_SUPPLY_CAPACITY=89 POWER_SUPPLY_VOLTAGE_OCV=4278000 POWER_SUPPLY_VOLTAGE_NOW=4278000 POWER_SUPPLY_VOLTAGE_MAX=4440000 POWER_SUPPLY_CURRENT_NOW=-659000 POWER_SUPPLY_CURRENT_AVG=0 POWER_SUPPLY_CHARGE_CONTROL_LIMIT=5 POWER_SUPPLY_CHARGE_CONTROL_LIMIT_MAX=16 POWER_SUPPLY_CONSTANT_CHARGE_CURRENT=4250000 POWER_SUPPLY_CHARGE_CONTROL_START_THRESHOLD=0 POWER_SUPPLY_CHARGE_CONTROL_END_THRESHOLD=0 POWER_SUPPLY_TEMP=316 POWER_SUPPLY_TECHNOLOGY=Li-poly POWER_SUPPLY_CHARGE_COUNTER=2868000 POWER_SUPPLY_CYCLE_COUNT=1222 POWER_SUPPLY_CHARGE_FULL_DESIGN=4610000 POWER_SUPPLY_CHARGE_FULL=3353000 POWER_SUPPLY_MODEL_NAME=N3_4610mah_90w POWER_SUPPLY_TIME_TO_FULL_AVG=0
+voltage_max = 4440000
+voltage_now = 4278000
+voltage_ocv = 4278000
+
+=== DIR: /sys/class/power_supply/usb (ls -la) ===
+total 0
+drwxr-xr-x 4 root   root      0 2026-11-24 15:30 .
+drwxr-xr-x 5 root   root      0 2026-11-24 15:30 ..
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 current_max
+-r--r--r-- 1 root   root   4096 2026-11-24 15:35 current_now
+lrwxrwxrwx 1 root   root      0 2026-11-24 16:29 device -> ../../../soc:qcom,pmic_glink:qcom,battery_charger
+-rw-r--r-- 1 root   root   4096 2026-11-24 16:29 input_current_limit
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 online
+drwxr-xr-x 2 root   root      0 2026-11-24 16:29 power
+lrwxrwxrwx 1 root   root      0 2026-11-24 16:29 subsystem -> ../../../../../../../class/power_supply
+-r--r--r-- 1 root   root   4096 2026-11-24 16:29 temp
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 type
+-rw-r--r-- 1 root   root   4096 2026-11-24 16:29 uevent
+-r--r--r-- 1 root   root   4096 2026-11-24 16:29 usb_type
+-r--r--r-- 1 root   root   4096 2026-11-24 15:30 voltage_max
+-rw-rw---- 1 system system 4096 2026-11-24 15:30 voltage_now
+drwxr-xr-x 2 root   root      0 2026-11-24 15:30 wakeup54
+--- VALUES: /sys/class/power_supply/usb ---
+current_max = 900000
+current_now = 828000
+input_current_limit = 900000
+online = 1
+temp = 320
+type = USB_CDP
+uevent = POWER_SUPPLY_NAME=usb POWER_SUPPLY_TYPE=USB_CDP POWER_SUPPLY_ONLINE=1 POWER_SUPPLY_VOLTAGE_NOW=4628000 POWER_SUPPLY_VOLTAGE_MAX=5000000 POWER_SUPPLY_CURRENT_NOW=828000 POWER_SUPPLY_CURRENT_MAX=900000 POWER_SUPPLY_INPUT_CURRENT_LIMIT=900000 POWER_SUPPLY_USB_TYPE=Unknown SDP DCP [CDP] ACA C PD PD_DRP PD_PPS BrickID POWER_SUPPLY_TEMP=320
+usb_type = Unknown SDP DCP [CDP] ACA C PD PD_DRP PD_PPS BrickID
+voltage_max = 5000000
+voltage_now = 4629000
+
+=== DIR: /sys/class/power_supply/wireless (ls -la) ===
+total 0
+drwxr-xr-x 4 root root    0 2026-11-24 15:30 .
+drwxr-xr-x 5 root root    0 2026-11-24 15:30 ..
+-r--r--r-- 1 root root 4096 2026-11-24 16:29 current_max
+-r--r--r-- 1 root root 4096 2026-11-24 16:29 current_now
+lrwxrwxrwx 1 root root    0 2026-11-24 16:29 device -> ../../../soc:qcom,pmic_glink:qcom,battery_charger
+-r--r--r-- 1 root root 4096 2026-11-24 16:29 input_current_limit
+-r--r--r-- 1 root root 4096 2026-11-24 15:30 online
+drwxr-xr-x 2 root root    0 2026-11-24 16:29 power
+-r--r--r-- 1 root root 4096 2026-11-24 16:29 present
+lrwxrwxrwx 1 root root    0 2026-11-24 16:29 subsystem -> ../../../../../../../class/power_supply
+-r--r--r-- 1 root root 4096 2026-11-24 16:29 temp
+-r--r--r-- 1 root root 4096 2026-11-24 15:30 type
+-rw-r--r-- 1 root root 4096 2026-11-24 16:29 uevent
+-r--r--r-- 1 root root 4096 2026-11-24 16:29 voltage_max
+-r--r--r-- 1 root root 4096 2026-11-24 16:29 voltage_now
+drwxr-xr-x 2 root root    0 2026-11-24 15:30 wakeup55
+--- VALUES: /sys/class/power_supply/wireless ---
+current_max = 0
+current_now = 828000
+input_current_limit = 900000
+online = 0
+present = 0
+temp = 330
+type = Wireless
+uevent = POWER_SUPPLY_NAME=wireless POWER_SUPPLY_TYPE=Wireless POWER_SUPPLY_ONLINE=0 POWER_SUPPLY_VOLTAGE_NOW=4678000 POWER_SUPPLY_VOLTAGE_MAX=0 POWER_SUPPLY_CURRENT_NOW=828000 POWER_SUPPLY_CURRENT_MAX=0 POWER_SUPPLY_INPUT_CURRENT_LIMIT=900000 POWER_SUPPLY_TEMP=330 POWER_SUPPLY_PRESENT=0
+voltage_max = 0
+voltage_now = 4678000
+
+=== DIR: /sys/class/qcom-battery (ls -la) ===
+total 0
+drwxr-xr-x   2 root   root      0 2026-11-24 15:30 .
+drwxr-xr-x 144 root   root      0 1970-01-01 08:19 ..
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 adapter_id
+-r--r--r--   1 root   root   4096 2026-11-24 16:06 adapter_svid
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 afp_temp
+-r--r--r--   1 root   root   4096 2026-11-24 16:06 anti_burn
+-r--r--r--   1 root   root   4096 2026-11-24 15:35 apdo_max
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 authentic
+-r--r-----   1 system system 4096 2026-11-24 15:30 average_current
+-r--r-----   1 system system 4096 2026-11-24 15:30 average_temp
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 bap_match
+-r--r--r--   1 root   root   4096 2026-11-24 15:49 batt_capacity_increase
+-r--r--r--   1 system system 4096 2026-11-24 15:30 batt_sn
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 batt_sox
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 battcont_online
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 battmoni_isc
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 battmoni_soa
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_battery_present
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_battery_temp
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_battery_voltage
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_bus_current
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_bus_delta
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_bus_voltage
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_chip_ok
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_slave_battery_present
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_slave_bus_current
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 bq2597x_slave_chip_ok
+-rw-r--r--   1 system system 4096 2026-11-24 15:30 bt_state
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 calc_rvalue
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 cc1
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 cc2
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 cc_orientation
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 cc_short_vbus
+-rw-rw----   1 system system 4096 2026-11-24 15:30 cc_toggle
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 cell_vendor
+-r--r--r--   1 root   root   4096 2026-11-24 16:06 charge_absoc
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 charge_control_en
+-rw-rw----   1 system system 4096 2026-11-24 15:30 charger_user_value_map
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 chip_ok
+-r--r-----   1 system system 4096 2026-11-24 15:30 cid_status
+-rw-rw----   1 system system 4096 2026-11-24 15:30 cloud_dynamic_shutdown
+-rw-rw----   1 system system 4096 2026-11-24 15:30 cloud_fod
+-rw-r--r--   1 root   root   4096 2026-11-24 15:30 connector_temp
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 connector_temp2
+-rw-rw----   1 system system 4096 2026-11-24 16:06 constant_power
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 count_level1
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 count_level2
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 count_level3
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 cp_mode
+-r--r-----   1 system system 4096 2026-11-24 15:30 current_deviation
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 current_state
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 dam_ovpgate
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 dis_uart
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 dm
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 dod_count
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 dod_countLT
+--w-------   1 root   root   4096 2026-11-24 16:29 dot_test
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 double85
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 dp
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 fake_cycle
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 fake_soc
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 fake_temp
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 fastchg_mode
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_ai
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_current_max
+-r--r-----   1 system system 4096 2026-11-24 15:30 fg1_cycle
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_df_check
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_fastcharge
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_fcc
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_fcc_soh
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_imax
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_oritemp
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_qmax
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_rm
+-r--r-----   1 system system 4096 2026-11-24 15:30 fg1_rsoc
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 fg1_seal_set
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_seal_state
+-r--r-----   1 system system 4096 2026-11-24 15:30 fg1_soh
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_tambient
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_temp_max
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_tfullq
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_time_ht
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_time_ot
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_tremq
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_tsim
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg1_vol_max
+-r--r-----   1 system system 4096 2026-11-24 15:30 fg2_soh_sn
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 fg2_temp_max
+-r--r--r--   1 root   root   4096 2026-11-24 15:31 fg_vendor
+-r--r-----   1 system system 4096 2026-11-24 15:30 get_learn_power
+-r--r-----   1 system system 4096 2026-11-24 15:30 get_learn_power_b
+-r--r-----   1 system system 4096 2026-11-24 15:30 get_learn_power_dev
+-r--r-----   1 system system 4096 2026-11-24 15:30 get_learn_power_dev_b
+-r--r-----   1 system system 4096 2026-11-24 15:30 get_learn_time_dev
+-rw-rw----   1 system system 4096 2026-11-24 15:30 handle_state
+-rw-rw----   1 system system 4096 2026-11-24 15:30 handle_stop_charging
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 has_dp
+-rw-rw----   1 system system 4096 2026-11-24 15:30 input_suspend
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 isc
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 last_node
+--w-------   1 root   root   4096 2026-11-24 16:29 low_fast_para
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 low_inductance_offset
+--w-------   1 root   root   4096 2026-11-24 16:29 lowfast_sw_para
+-rw-r--r--   1 system system 4096 2026-11-24 15:30 lpd_charging
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 lpd_control
+-r--r--r--   1 system system 4096 2026-11-24 15:30 max_life_temp
+-r--r--r--   1 system system 4096 2026-11-24 15:30 max_life_vol
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 maxtemp_occurtime
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 maxtemptime
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 min_life_temp
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 min_life_vol
+-rw-rw-r--   1 system system 4096 2026-11-24 15:30 moisture_detection_en
+-r--r--r--   1 root   root   4096 2026-11-24 16:06 moisture_detection_status
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 mtbf_current
+-rw-rw----   1 system system 4096 2026-11-24 15:30 night_charging
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 ntc_alarm
+-r--r-----   1 system system 4096 2026-11-24 15:30 nvt_referance_current
+-r--r-----   1 system system 4096 2026-11-24 15:30 nvt_referance_power
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 op_mode
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 open_loadsw
+-r--r-----   1 system system 4096 2026-11-24 15:30 otg_ui_support
+-r--r-----   1 system system 4096 2026-11-24 15:30 over_peak_flag
+-r--r--r--   1 system system 4096 2026-11-24 15:30 over_vol_duration
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 pack_vendor
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 pd_verifed
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 pdo2
+-rw-rw-rw-   1 system system 4096 2026-11-24 15:30 plate_shock
+-r--r-----   1 system system 4096 2026-11-24 15:30 power_deviation
+-r--r--r--   1 root   root   4096 2026-11-24 16:17 power_max
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 qbg_curr
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 qmax
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 qmax_cyclecount
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 quick_charge_type
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 real_type
+-rw-rw----   1 system system 4096 2026-11-24 15:30 referance_power
+-r--r-----   1 system system 4096 2026-11-24 15:30 remaining_time
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 remove_temp_limit
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 request_vdm_cmd
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 resistance
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 resistance_id
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 restrict_chg
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 restrict_cur
+-rw-rw----   1 system system 4096 2026-11-24 15:30 reverse_chg_mode
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 reverse_chg_state
+-rw-rw----   1 system system 4096 2026-11-24 15:30 reverse_quick_charge
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 runtime
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 rx_cep
+-rw-rw----   1 system system 4096 2026-11-24 15:30 rx_cr
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 rx_iout
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 rx_offset
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 rx_sleep_mode
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 rx_ss
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 rx_vout
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 rx_vrect
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 sbu1
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 sbu2
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 screen_cctog
+-rw-rw----   1 system system 4096 2026-11-24 16:22 set_learn_power
+-rw-rw----   1 system system 4096 2026-11-24 15:30 set_learn_power_b
+-rw-rw----   1 system system 4096 2026-11-24 15:30 set_rx_sleep
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 ship_mode_en
+-rw-rw----   1 system system 4096 2026-11-24 15:30 shipmode_count_reset
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 shutdown_delay
+-rw-rw----   1 system system 4096 2026-11-24 15:30 smart_batt
+-rw-rw----   1 system system 4096 2026-11-24 15:30 smart_chg
+-rw-r--r--   1 root   root   4096 2026-11-24 16:06 smart_fv
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 smart_sic_mode
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 soc_decimal
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 soc_decimal_rate
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 software_cid
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 soh
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 soh_new
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 soh_sn
+-rw-rw----   1 system system 4096 2026-11-24 15:30 sport_mode
+-rw-rw----   1 system system 4096 2026-11-24 15:30 start_learn
+-rw-rw----   1 system system 4096 2026-11-24 15:30 start_learn_b
+-rw-rw----   1 system system 4096 2026-11-24 15:30 stop_learn
+-rw-rw----   1 system system 4096 2026-11-24 15:30 stop_learn_b
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 thermal_board_temp
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 thermal_remove
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 thermal_scene
+-rw-rw----   1 system system 4096 2026-11-24 15:30 two_ntc_parameter1
+-rw-rw----   1 system system 4096 2026-11-24 15:30 two_ntc_parameter2
+-rw-rw----   1 system system 4096 2026-11-24 15:30 two_ntc_parameter3
+-rw-rw----   1 system system 4096 2026-11-24 15:30 two_ntc_parameter4
+-rw-rw----   1 system system 4096 2026-11-24 15:30 two_ntc_parameter5
+-rw-rw----   1 system system 4096 2026-11-24 15:30 two_ntc_parameter6
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 tx_adapter
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 tx_mac
+-r--r--r--   1 root   root   4096 2026-11-24 15:30 typec_mode
+-rw-rw----   1 system system 4096 2026-11-24 15:30 ui_slave_soh
+-rw-rw----   1 system system 4096 2026-11-24 15:30 ui_soh
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 usb_real_type
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 usb_typec_compliant
+-rw-rw----   1 system usb    4096 2026-11-24 15:30 usbinterface
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 ut_test
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 verify_digest
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 verify_process
+-rw-rw-r--   1 root   root   4096 2026-11-24 15:30 verify_slave_flag
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 wireless_boost_en
+-rw-rw----   1 system system 4096 2026-11-24 15:30 wireless_chip_fw
+--w-------   1 root   root   4096 2026-11-24 16:29 wireless_fw_crc
+--w-------   1 root   root   4096 2026-11-24 16:29 wireless_fw_force_update
+--w-------   1 root   root   4096 2026-11-24 16:29 wireless_fw_update
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 wireless_fw_update_time_ms
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wireless_fw_version
+-r--r--r--   1 root   root   4096 2026-11-24 15:35 wireless_tx_uuid
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wireless_type
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wireless_version_forcit
+--w-------   1 root   root   4096 2026-11-24 16:29 wls_bin
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wls_car_adapter
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 wls_debug
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wls_die_temp
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wls_fc_flag
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 wls_fw_state
+-rw-r--r--   1 root   root   4096 2026-11-24 15:30 wls_quick_chg_control_limit
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 wls_thermal_remove
+-rw-rw----   1 system system 4096 2026-11-24 15:30 wls_tx_speed
+-rw-r--r--   1 root   root   4096 2026-11-24 15:30 wlscharge_control_limit
+--w-------   1 root   root   4096 2026-11-24 16:29 xmfg_fw_bin
+-r--r--r--   1 root   root   4096 2026-11-24 16:29 xmfg_fw_version
+-rw-r--r--   1 root   root   4096 2026-11-24 16:29 xmfg_update_region
+--- VALUES: /sys/class/qcom-battery ---
+adapter_id = 00000000
+adapter_svid = 0000
+afp_temp = 34
+anti_burn = 2
+apdo_max = 0
+authentic = 1
+average_current = 0
+average_temp = -2415
+bap_match = 1
+batt_capacity_increase = 0
+batt_sn = NVBP4Q4113011019AMD1600000000000
+batt_sox = 0000
+battcont_online = 1
+battmoni_isc = 0
+battmoni_soa = 0
+bq2597x_battery_present = 1
+bq2597x_battery_temp = 0
+bq2597x_battery_voltage = 4286
+bq2597x_bus_current = 0
+bq2597x_bus_delta = 0
+bq2597x_bus_voltage = 4700
+bq2597x_chip_ok = 1
+bq2597x_slave_battery_present = 0
+bq2597x_slave_bus_current = 0
+bq2597x_slave_chip_ok = 0
+bt_state = 0
+calc_rvalue = 14303
+cc1 = 2
+cc2 = 401
+cc_orientation = 2
+cc_short_vbus = 0
+cc_toggle = 0
+cell_vendor = ATL
+charge_absoc = 0
+charge_control_en = 0
+charger_user_value_map = 0
+chip_ok = 1
+cid_status = 1
+cloud_dynamic_shutdown = 
+cloud_fod = 
+connector_temp = 320
+connector_temp2 = 250
+constant_power = 2200
+count_level1 = 0
+count_level2 = 0
+count_level3 = 0
+cp_mode = 0
+current_deviation = 0
+current_state = SNK_Startup
+dam_ovpgate = 0
+dis_uart = 0
+dm = 0
+dod_count = 0
+dod_countLT = 0
+dot_test = 
+double85 = 0
+dp = 0
+fake_cycle = 1222
+fake_soc = -22
+fake_temp = 0
+fastchg_mode = 0
+fg1_ai = -703000
+fg1_current_max = 0
+fg1_cycle = 1222
+fg1_df_check = 6900
+fg1_fastcharge = 0
+fg1_fcc = 3353000
+fg1_fcc_soh = 0
+fg1_imax = 10000
+fg1_oritemp = 0
+fg1_qmax = 0
+fg1_rm = 2869000
+fg1_rsoc = 86
+fg1_seal_set = 0
+fg1_seal_state = 2
+fg1_soh = 80
+fg1_tambient = 65073
+fg1_temp_max = 66
+fg1_tfullq = 3612
+fg1_time_ht = 2
+fg1_time_ot = 0
+fg1_tremq = 3095
+fg1_tsim = 3203
+fg1_vol_max = 4440000
+fg2_soh_sn = 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+fg2_temp_max = 66
+fg_vendor = 2
+get_learn_power = 96
+get_learn_power_b = 709
+get_learn_power_dev = 1804
+get_learn_power_dev_b = -709
+get_learn_time_dev = 37
+handle_state = 0
+handle_stop_charging = 1
+has_dp = 0
+input_suspend = 0
+isc = 0
+last_node = 123456789
+low_fast_para = 
+low_inductance_offset = 0
+lowfast_sw_para = 
+lpd_charging = 0
+lpd_control = 1
+max_life_temp = 66
+max_life_vol = 4570
+maxtemp_occurtime = 36434890
+maxtemptime = 41634
+min_life_temp = 0
+min_life_vol = 0
+moisture_detection_en = 1
+moisture_detection_status = 0
+mtbf_current = 0
+night_charging = 0
+ntc_alarm = 4294967274
+nvt_referance_current = 0
+nvt_referance_power = 0
+op_mode = 0
+open_loadsw = 0
+otg_ui_support = 1
+over_peak_flag = 0
+over_vol_duration = 17
+pack_vendor = NVT
+pd_verifed = 0
+pdo2 = 00000000
+plate_shock = 0
+power_deviation = 0
+power_max = 0
+qbg_curr = 0
+qmax = 0
+qmax_cyclecount = 0
+quick_charge_type = 0
+real_type = CDP
+referance_power = 0
+remaining_time = 298
+remove_temp_limit = 0
+request_vdm_cmd = 0,Null
+resistance = 100000
+resistance_id = 100000
+restrict_chg = 0
+restrict_cur = 1000000
+reverse_chg_mode = 0
+reverse_chg_state = 0
+reverse_quick_charge = 0
+runtime = 38932966
+rx_cep = 0
+rx_cr = 0
+rx_iout = 0
+rx_offset = 0
+rx_sleep_mode = 0
+rx_ss = 0
+rx_vout = 0
+rx_vrect = 0
+sbu1 = 17
+sbu2 = 16
+screen_cctog = 0
+set_learn_power = 2200
+set_learn_power_b = 0
+set_rx_sleep = 0
+ship_mode_en = 0
+shipmode_count_reset = 0
+shutdown_delay = 0
+smart_batt = 0
+smart_chg = 0
+smart_fv = 0
+smart_sic_mode = 0
+soc_decimal = 15
+soc_decimal_rate = 25
+software_cid = 0
+soh = 80
+soh_new = 100
+soh_sn = 78 86 66 80 52 81 52 49 49 51 48 49 49 48 49 57 65 77 68 49 54 48 48 48 48 48 48 48 48 48 48 48
+sport_mode = 0
+start_learn = 1
+start_learn_b = 1
+stop_learn = 1
+stop_learn_b = 1
+thermal_board_temp = 328
+thermal_remove = 0
+thermal_scene = 0
+two_ntc_parameter1 = 0
+two_ntc_parameter2 = 0
+two_ntc_parameter3 = 0
+two_ntc_parameter4 = 0
+two_ntc_parameter5 = 0
+two_ntc_parameter6 = 0
+tx_adapter = 0
+tx_mac = 0
+typec_mode = Source attached (default current)
+ui_slave_soh = 0 0 0 0 0 0 0 0 0 0 0
+ui_soh = 0 0 0 0 0 0 0 0 0 0 0
+usb_real_type = CDP
+usb_typec_compliant = 1
+usbinterface = 0
+ut_test = 
+verify_digest = 82e9642a02feb345fa2deb5a11a9ae9de85e7fc3cdfe762cb0e4d83c04bd074e
+verify_process = 0
+verify_slave_flag = 0
+wireless_boost_en = 0
+wireless_chip_fw = 00.00.00.00
+wireless_fw_crc = 
+wireless_fw_force_update = 
+wireless_fw_update = 
+wireless_fw_update_time_ms = 1000
+wireless_fw_version = 0x0
+wireless_tx_uuid = 00.00.00.00
+wireless_type = Unknown
+wireless_version_forcit = fail
+wls_bin = 
+wls_car_adapter = 0
+wls_debug = vout=0, vrect=0, iout=0
+wls_die_temp = 0
+wls_fc_flag = 0
+wls_fw_state = 0
+wls_quick_chg_control_limit = 0
+wls_thermal_remove = 0
+wls_tx_speed = 0
+wlscharge_control_limit = 0
+xmfg_fw_bin = 
+xmfg_fw_version = V00.00.00
+xmfg_update_region = 0
+
+=== SEARCH CHARGE CONTROL NODES (/sys/class/power_supply & /sys/class/qcom-battery & /sys/devices/platform/soc/*battery*) ===
+/sys/class/qcom-battery/average_current
+/sys/class/qcom-battery/bq2597x_bus_current
+/sys/class/qcom-battery/bq2597x_slave_bus_current
+/sys/class/qcom-battery/charge_control_en
+/sys/class/qcom-battery/current_deviation
+/sys/class/qcom-battery/current_state
+/sys/class/qcom-battery/fg1_current_max
+/sys/class/qcom-battery/handle_stop_charging
+/sys/class/qcom-battery/input_suspend
+/sys/class/qcom-battery/lpd_charging
+/sys/class/qcom-battery/mtbf_current
+/sys/class/qcom-battery/night_charging
+/sys/class/qcom-battery/nvt_referance_current
+/sys/class/qcom-battery/remove_temp_limit
+/sys/class/qcom-battery/restrict_chg
+/sys/class/qcom-battery/restrict_cur
+/sys/class/qcom-battery/smart_batt
+/sys/class/qcom-battery/smart_chg
+/sys/class/qcom-battery/smart_fv
+/sys/class/qcom-battery/smart_sic_mode
+/sys/class/qcom-battery/wls_quick_chg_control_limit
+/sys/class/qcom-battery/wlscharge_control_limit

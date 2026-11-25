@@ -1,0 +1,16 @@
+﻿# Build artifacts & release archives
+dist/
+*.zip
+
+# Temporary directories, scratch & logs
+_temp_ee_repo/
+*.log
+*.tmp
+*.bak
+
+# OS & IDE files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

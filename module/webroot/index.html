@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>X14 Optimizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <div class="brand-row">
+          <span class="brand-dot" id="daemon-dot" aria-hidden="true"></span>
+          <h1 class="brand-title">X14 Optimizer</h1>
+          <span class="badge badge-muted mono" id="device-badge">houji</span>
+          <span class="badge badge-warn hidden" id="demo-badge">DEMO</span>
+        </div>
+        <p class="brand-sub" id="daemon-sub">Đang kết nối...</p>
+      </div>
+      <div class="topbar-actions">
+        <button type="button" class="icon-btn" id="btn-theme" aria-label="Đổi giao diện sáng tối" title="Sáng / Tối">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+        </button>
+        <button type="button" class="icon-btn" id="btn-refresh" aria-label="Làm mới thông số" title="Làm mới">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12a9 9 0 1 1-2.64-6.36"></path>
+            <polyline points="21 3 21 9 15 9"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <!-- TAB 1: DASHBOARD -->
+    <section class="tab-panel active" id="panel-dashboard" aria-label="Tổng quan hệ thống">
+      <div class="grid-2">
+        <article class="card metric-card">
+          <div class="card-head">
+            <span class="card-label">PIN &amp; SẠC</span>
+            <span class="badge" id="charge-state-badge">--</span>
+          </div>
+          <div class="metric-big mono" id="batt-pct">--%</div>
+          <div class="metric-meta mono" id="batt-meta">-- mV · -- mA</div>
+          <div class="metric-sub" id="batt-health">SOH --% · -- chu kỳ</div>
+        </article>
+
+        <article class="card metric-card">
+          <div class="card-head">
+            <span class="card-label">NHIỆT ĐỘ &amp; GUARD</span>
+            <span class="badge" id="thermal-state-badge">NORMAL</span>
+          </div>
+          <div class="metric-big mono" id="temp-batt">--.-°C</div>
+          <div class="metric-meta mono" id="temp-skin">Vỏ: --.-°C · Bo: --.-°C</div>
+          <div class="metric-sub mono" id="temp-soc">CPU: --.-°C · GPU: --.-°C</div>
+        </article>
+      </div>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="card-label">MÀN HÌNH &amp; TẦN SỐ QUÉT</span>
+          <span class="badge" id="fps-mode-badge">--</span>
+        </div>
+        <div class="kv-grid">
+          <div class="kv-item">
+            <span class="kv-key">Tần số thực</span>
+            <span class="kv-val mono" id="disp-dyn-fps">-- Hz</span>
+          </div>
+          <div class="kv-item">
+            <span class="kv-key">Peak / Min</span>
+            <span class="kv-val mono" id="disp-rr-bounds">-- / --</span>
+          </div>
+          <div class="kv-item">
+            <span class="kv-key">Gỡ khóa 60FPS</span>
+            <span class="kv-val mono" id="disp-game-cap">--</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="card-label">CHỌN NHANH PROFILE HIỆU NĂNG</span>
+          <span class="badge badge-muted mono" id="active-profile-badge">--</span>
+        </div>
+        <div class="profile-grid" role="group" aria-label="Profile hiệu năng">
+          <button type="button" class="choice-btn" data-profile="balanced">
+            <strong>Cân bằng</strong>
+            <span>Mượt + mát máy (Khuyên dùng)</span>
+          </button>
+          <button type="button" class="choice-btn" data-profile="battery">
+            <strong>Tiết kiệm pin</strong>
+            <span>Giữ policy0, hạ trần Big/X4</span>
+          </button>
+          <button type="button" class="choice-btn" data-profile="performance">
+            <strong>Hiệu năng cao</strong>
+            <span>GPU 903MHz · Mở trần CPU (QoS nhiệt)</span>
+          </button>
+          <button type="button" class="choice-btn" data-profile="stock">
+            <strong>Mặc định gốc</strong>
+            <span>Trả trần xung boot của máy</span>
+          </button>
+          <button type="button" class="choice-btn choice-btn-wide" data-profile="gaming">
+            <strong>Max Uncapped (Gaming 120FPS)</strong>
+            <span>Full 4 cụm CPU (3.3GHz) + GPU 903MHz + Khóa 120Hz (Nới ngưỡng nhiệt 45°C)</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="card-label">TELEMETRY CPU &amp; GPU REALTIME</span>
+          <span class="badge badge-muted mono" id="gpu-badge">GPU --</span>
+        </div>
+        <div class="cluster-list" id="cpu-cluster-list"></div>
+      </article>
+    </section>
+
+    <!-- TAB 2: BATTERY & SCREEN-OFF -->
+    <section class="tab-panel" id="panel-battery" aria-label="Pin, Sạc thông minh và Tắt màn hình">
+      <article class="card">
+        <div class="card-head">
+          <span class="card-label">SẠC THÔNG MINH (SMART CHARGE)</span>
+          <label class="switch">
+            <input type="checkbox" id="chg-enabled">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="callout">
+          <strong>Ngắt sạc <code id="callout-stop-pct">85%</code> – Sạc lại <code id="callout-resume-pct">75%</code> (Hysteresis &ge; 10%):</strong> Áp dụng <code id="callout-bypass-node">constant_charge_current=0</code> để chặn dòng nạp vào cell pin (True Bypass, không nháy popup). <em>(Gaming Auto-Bypass ở tab FPS &amp; Nhiệt hoạt động độc lập qua USB khi chơi game.)</em>
+        </div>
+
+        <div class="topup-box">
+          <div class="topup-info">
+            <div class="check-title">Sạc đầy 1 lần (100%)</div>
+            <div class="check-sub">Tạm cho phép sạc tới 100% khi cần đi xa. Tự động hủy và quay về ngưỡng bảo vệ ngay khi rút cáp sạc (USB/Wireless offline).</div>
+          </div>
+          <button type="button" class="btn-topup" id="btn-topup-once">Bật Sạc đầy 1 lần (100%)</button>
+        </div>
+
+        <div class="form-row">
+          <div class="form-label-row">
+            <label for="chg-stop">Ngưỡng dừng sạc</label>
+            <span class="mono val-pill" id="chg-stop-val">85%</span>
+          </div>
+          <input type="range" id="chg-stop" min="50" max="100" step="1" value="85">
+        </div>
+
+        <div class="form-row">
+          <div class="form-label-row">
+            <label for="chg-resume">Ngưỡng sạc lại (Hysteresis &ge; 10%)</label>
+            <span class="mono val-pill" id="chg-resume-val">75%</span>
+          </div>
+          <input type="range" id="chg-resume" min="40" max="90" step="1" value="75">
+          <span class="help-text mono" id="chg-gap-hint">Khoảng cách an toàn: 10% (tối thiểu 10%)</span>
+        </div>
+
+        <div class="form-row">
+          <span class="field-label">Giới hạn dòng sạc</span>
+          <button type="button" class="sheet-trigger" id="trigger-chg-limit" data-picker="chg-limit" aria-haspopup="dialog" aria-expanded="false">
+            <span class="sheet-trigger-text">Không giới hạn</span>
+            <svg class="sheet-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <div class="form-row">
+          <span class="field-label">Phương thức ngắt sạc</span>
+          <button type="button" class="sheet-trigger" id="trigger-chg-mode" data-picker="chg-mode" aria-haspopup="dialog" aria-expanded="false">
+            <span class="sheet-trigger-text">True Bypass (fcc=0)</span>
+            <svg class="sheet-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <button type="button" class="btn-primary" id="btn-save-charge">Lưu cấu hình sạc</button>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="card-label">TIẾT KIỆM PIN KHI TẮT MÀN (SCREEN-OFF)</span>
+          <label class="switch">
+            <input type="checkbox" id="soff-enabled">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <p class="help-text">
+          Kết hợp <strong>BusyBox inotifyd (Zero-Lag Wakeup)</strong> để khôi phục xung nhịp tức thì ngay khi màn hình sáng. Chỉ siết trần cụm Big/Prime (<code>policy2/5/7</code>) và GPU, <strong>giữ nguyên cụm nhỏ <code>policy0</code></strong> (race-to-idle).
+        </p>
+
+        <div class="form-row">
+          <div class="form-label-row">
+            <label for="soff-debounce">Độ trễ trước khi siết xung (Debounce)</label>
+            <span class="mono val-pill" id="soff-debounce-val">30s</span>
+          </div>
+          <input type="range" id="soff-debounce" min="10" max="120" step="5" value="30">
+        </div>
+
+        <div class="check-row">
+          <div>
+            <div class="check-title">Ép Doze sâu khi tắt màn (không cắm sạc)</div>
+            <div class="check-sub">Gọi deviceidle force-idle sau debounce. Lưu ý: Có thể gây trễ thông báo ứng dụng (tự động nhả unforce ngay khi mở màn hình).</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="soff-doze">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <button type="button" class="btn-primary" id="btn-save-screenoff">Lưu cấu hình tắt màn</button>
+      </article>
+    </section>
+
+    <!-- TAB 3: FPS & THERMAL -->
+    <section class="tab-panel" id="panel-fps" aria-label="Tần số quét 120FPS và Bảo vệ nhiệt">
+      <article class="card">
+        <div class="card-head">
+          <span class="card-label">MỞ KHÓA 120FPS TRÊN HYPEROS</span>
+          <span class="badge" id="fps-tab-badge">--</span>
+        </div>
+
+        <div class="radio-stack" role="radiogroup" aria-label="Chế độ FPS">
+          <label class="radio-card">
+            <input type="radio" name="fps-mode" value="smart120">
+            <span class="radio-dot" aria-hidden="true"></span>
+            <div class="radio-body">
+              <strong>Smart 120Hz (Khuyên dùng · An toàn)</strong>
+              <span>Gỡ khóa 60FPS game mặc định và đặt trần 120Hz, giữ LTPO tự giảm 10–60Hz khi tĩnh. <em>Không tắt PowerKeeper hay Joyose.</em></span>
+            </div>
+          </label>
+
+          <label class="radio-card">
+            <input type="radio" name="fps-mode" value="force120">
+            <span class="radio-dot" aria-hidden="true"></span>
+            <div class="radio-body">
+              <strong>Force 120Hz + Thermal Guard</strong>
+              <span>Khóa <code>min_refresh_rate=120</code> toàn hệ thống. Tự động nhả về Smart/60Hz nếu Thermal Guard kích hoạt.</span>
+            </div>
+          </label>
+
+          <label class="radio-card">
+            <input type="radio" name="fps-mode" value="stock">
+            <span class="radio-dot" aria-hidden="true"></span>
+            <div class="radio-body">
+              <strong>Mặc định HyperOS (Stock)</strong>
+              <span>Khôi phục cấu hình refresh rate gốc của máy và bật lại toàn bộ app hệ thống.</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="advanced-box hidden" id="force-pk-box">
+          <div class="callout callout-warn">
+            <strong>Tùy chọn nâng cao (Force 120Hz):</strong> Tắt <code>PowerKeeper</code> có thể khiến thống kê Pin HyperOS không chuẩn. <em>Smart 120Hz</em> và <em>Reset / Gỡ module</em> sẽ tự gọi <code>pm enable</code> khôi phục nguyên trạng.
+          </div>
+          <span class="field-label">Xử lý Joyose / PowerKeeper</span>
+          <button type="button" class="sheet-trigger" id="trigger-fps-pk-mode" data-picker="fps-pk-mode" aria-haspopup="dialog" aria-expanded="false">
+            <span class="sheet-trigger-text">Giữ nguyên cả hai</span>
+            <svg class="sheet-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <button type="button" class="btn-primary" id="btn-save-fps">Áp dụng chế độ FPS</button>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="card-label">AUTO GAME MODE &amp; JOYOSE</span>
+          <span class="badge badge-muted" id="autogame-state-badge">IDLE</span>
+        </div>
+
+        <div class="check-row">
+          <div>
+            <div class="check-title">Auto Game Mode (Hồ sơ riêng từng game)</div>
+            <div class="check-sub">Chỉ kiểm tra khi sáng màn hình · Trễ thoát 15s khi vuốt trả lời tin nhắn · Tự về profile hằng ngày &amp; LTPO khi thoát</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="auto-game-enabled">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="check-row">
+          <div>
+            <div class="check-title">Vô hiệu hóa com.xiaomi.joyose (Độc lập)</div>
+            <div class="check-sub">Chặn Joyose bóp 90Hz/CPU khi chơi game. Bật giữ nguyên cố định, không bật/tắt lặp lại gây giật lag</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="joyose-disabled">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="check-row">
+          <div>
+            <div class="check-title">Tự bật True Bypass khi chơi game</div>
+            <div class="check-sub">Khi mở game &amp; cắm cáp USB đạt sàn pin, tự ngắt dòng nạp vào pin (<code>fcc=0</code>) nuôi trực tiếp từ nguồn sạc; tự nhả kèm xung 90W PPS khi thoát game</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="game-bypass-enabled">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <span class="field-label">Ngưỡng sàn pin Gaming Bypass (Hysteresis +2%)</span>
+          <button type="button" class="sheet-trigger" id="trigger-game-bypass-min" data-picker="game-bypass-min" aria-haspopup="dialog" aria-expanded="false">
+            <span class="sheet-trigger-text">20% — Khuyên dùng</span>
+            <svg class="sheet-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="form-row">
+          <div class="form-label-row">
+            <span class="field-label">Danh sách game &amp; Hồ sơ riêng</span>
+            <span class="badge badge-muted mono" id="game-count-badge">0 app</span>
+          </div>
+          <button type="button" class="btn-primary" id="btn-open-app-picker">+ Chọn game từ máy</button>
+          <span class="help-text">Chạm vào thẻ hồ sơ bên cạnh mỗi game để đổi nhanh giữa <strong>Max 120FPS</strong>, <strong>Mát 120Hz</strong> (GPU 720MHz) và <strong>Treo &amp; Tải</strong> (60Hz · GPU 422MHz).</span>
+        </div>
+
+        <div class="game-list" id="game-list"></div>
+
+        <details class="manual-pkg-details">
+          <summary>Nhập mã gói thủ công (Nâng cao)</summary>
+          <div class="pkg-add-row manual-pkg-body">
+            <input type="text" id="game-pkg-input" class="text-input mono" placeholder="vd: com.garena.game.kgvn" autocomplete="off" autocapitalize="none" spellcheck="false">
+            <button type="button" class="btn-secondary" id="btn-add-game">+ Thêm</button>
+          </div>
+        </details>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="card-label">ĐA NHIỆM &amp; ZRAM (THUẦN RAM)</span>
+          <span class="badge badge-muted mono" id="zram-state-badge">--</span>
+        </div>
+
+        <div class="check-row">
+          <div>
+            <div class="check-title">Bật ZRAM thuần RAM</div>
+            <div class="check-sub">Nén app nền ngay trên RAM, không ghi lên ổ UFS (Memory Extension). Kết hợp nới SPC HyperOS giữ game khi chuyển app.</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="zram-enabled">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="kv-grid">
+          <div class="kv-item">
+            <span class="kv-key">Dung lượng ZRAM</span>
+            <span class="kv-val mono" id="zram-disk">-- MB</span>
+          </div>
+          <div class="kv-item">
+            <span class="kv-key">Gốc / RAM thực</span>
+            <span class="kv-val mono" id="zram-usage">-- / -- MB</span>
+          </div>
+          <div class="kv-item">
+            <span class="kv-key">Tỷ lệ nén</span>
+            <span class="kv-val mono" id="zram-ratio">--</span>
+          </div>
+        </div>
+
+        <div class="grid-2-compact">
+          <div class="form-row">
+            <span class="field-label">Dung lượng ZRAM</span>
+            <button type="button" class="sheet-trigger" id="trigger-zram-size" data-picker="zram-size" aria-haspopup="dialog" aria-expanded="false">
+              <span class="sheet-trigger-text">6 GB</span>
+              <svg class="sheet-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <div class="form-row">
+            <span class="field-label">Thuật toán nén</span>
+            <button type="button" class="sheet-trigger" id="trigger-zram-algo" data-picker="zram-algo" aria-haspopup="dialog" aria-expanded="false">
+              <span class="sheet-trigger-text">lz4 (Nhanh)</span>
+              <svg class="sheet-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <button type="button" class="btn-primary" id="btn-save-zram">Áp dụng cấu hình ZRAM</button>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="card-label">BẢO VỆ NHIỆT 2 TẦNG (THERMAL GUARD)</span>
+          <label class="switch">
+            <input type="checkbox" id="thm-enabled">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <p class="help-text">
+          Chạy song song <code>mi_thermald</code> dùng cảm biến Pin + Bo mạch (<code>board_sensor_temp</code>). Hằng ngày: <strong>Warn</strong> nhả Force 120Hz; <strong>Critical</strong> khóa 60Hz, siết xung, tạm dừng sạc. Riêng <strong>Gaming</strong>: Warn <strong>44°C/48°C</strong> (hạ GPU, giữ 120Hz); Critical <strong>46°C/50°C</strong> (xả <code>cpu_nolimit</code>, khóa 60Hz).
+        </p>
+
+        <div class="form-row">
+          <div class="form-label-row">
+            <label for="thm-warn">Ngưỡng Warn (Nhiệt pin)</label>
+            <button type="button" class="mono val-pill val-pill-btn" id="thm-warn-val" data-picker="thm-warn" aria-haspopup="dialog" aria-expanded="false">
+              <span>42°C</span>
+              <svg class="sheet-chevron" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+          <input type="range" id="thm-warn" min="38" max="45" step="1" value="42">
+        </div>
+
+        <div class="form-row">
+          <div class="form-label-row">
+            <label for="thm-crit">Ngưỡng Critical (Nhiệt pin)</label>
+            <button type="button" class="mono val-pill val-pill-btn" id="thm-crit-val" data-picker="thm-crit" aria-haspopup="dialog" aria-expanded="false">
+              <span>45°C</span>
+              <svg class="sheet-chevron" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+          <input type="range" id="thm-crit" min="42" max="49" step="1" value="45">
+        </div>
+
+        <button type="button" class="btn-primary" id="btn-save-thermal">Lưu ngưỡng bảo vệ nhiệt</button>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="card-label">KHÔI PHỤC TRẠNG THÁI GỐC</span>
+        </div>
+        <p class="help-text">Trả toàn bộ trần xung CPU/GPU, chế độ sạc, refresh rate về snapshot lúc boot và bật lại Joyose/PowerKeeper.</p>
+        <button type="button" class="btn-danger" id="btn-reset-defaults">Khôi phục mặc định gốc (Reset Defaults)</button>
+      </article>
+    </section>
+
+    <!-- TAB 4: LOGS & HARDWARE -->
+    <section class="tab-panel" id="panel-logs" aria-label="Nhật ký hoạt động và phần cứng">
+      <article class="card">
+        <div class="card-head">
+          <span class="card-label">KHẢ NĂNG PHẦN CỨNG PHÁT HIỆN</span>
+        </div>
+        <div class="cap-grid mono" id="cap-grid"></div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <span class="card-label">NHẬT KÝ VẬN HÀNH</span>
+          <span class="badge badge-muted mono">/data/local/tmp/x14_perf_battery.log</span>
+        </div>
+        <div class="log-actions">
+          <button type="button" class="btn-secondary" id="btn-reload-logs">Tải lại log</button>
+          <button type="button" class="btn-secondary" id="btn-clear-logs">Xóa log</button>
+        </div>
+        <pre class="log-box mono" id="log-output">Đang tải nhật ký...</pre>
+      </article>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Điều hướng chính">
+    <div class="bottom-nav-inner" id="bottom-nav-inner">
+      <span class="nav-indicator" id="nav-indicator" aria-hidden="true"></span>
+      <button type="button" class="nav-btn active" data-tab="dashboard" data-index="0">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+          <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+          <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+          <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+        </svg>
+        <span>Tổng quan</span>
+      </button>
+      <button type="button" class="nav-btn" data-tab="battery" data-index="1">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="7" width="16" height="10" rx="2"></rect>
+          <line x1="22" y1="11" x2="22" y2="13"></line>
+          <polyline points="9 10 7 12 11 12 9 14"></polyline>
+        </svg>
+        <span>Pin &amp; Sạc</span>
+      </button>
+      <button type="button" class="nav-btn" data-tab="fps" data-index="2">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+        </svg>
+        <span>FPS &amp; Nhiệt</span>
+      </button>
+      <button type="button" class="nav-btn" data-tab="logs" data-index="3">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="4 17 10 11 4 5"></polyline>
+          <line x1="12" y1="19" x2="20" y2="19"></line>
+        </svg>
+        <span>Nhật ký</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- SHARED GLASSMORPHIC TACTILE BOTTOM SHEET PICKER -->
+  <div class="sheet-backdrop" id="sheet-picker-modal" role="dialog" aria-modal="true" aria-labelledby="sheet-title" aria-hidden="true">
+    <div class="sheet-panel" id="sheet-panel">
+      <div class="sheet-drag-zone" id="sheet-drag-zone">
+        <span class="sheet-handle" aria-hidden="true"></span>
+      </div>
+      <div class="sheet-head">
+        <div class="sheet-head-text">
+          <h2 class="sheet-title" id="sheet-title">Chọn tùy chọn</h2>
+          <span class="sheet-sub" id="sheet-sub"></span>
+        </div>
+        <button type="button" class="icon-btn icon-btn-sm" id="btn-close-sheet" aria-label="Đóng bảng chọn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="sheet-options" id="sheet-options" role="listbox"></div>
+    </div>
+  </div>
+
+  <!-- UPGRADED APP PICKER MODAL -->
+  <div class="modal-backdrop" id="app-picker-modal" role="dialog" aria-modal="true" aria-labelledby="picker-modal-title" aria-hidden="true">
+    <div class="modal-sheet">
+      <div class="modal-head">
+        <div class="modal-head-info">
+          <h2 class="modal-title" id="picker-modal-title">Chọn Game / Ứng dụng</h2>
+          <span class="modal-sub" id="picker-source-hint">Đang tải danh sách ứng dụng...</span>
+        </div>
+        <div class="modal-head-actions">
+          <span class="badge badge-warn mono" id="picker-selected-count">0 đã chọn</span>
+          <button type="button" class="icon-btn icon-btn-sm" id="btn-close-picker" aria-label="Đóng">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="picker-toolbar">
+        <div class="pkg-add-row">
+          <div class="search-field">
+            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="search" id="picker-search" class="search-input" placeholder="Tìm theo tên hoặc mã gói..." autocomplete="off" autocapitalize="none" spellcheck="false">
+            <button type="button" class="search-clear hidden" id="btn-picker-clear" aria-label="Xóa từ khóa">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+          <button type="button" class="icon-btn" id="btn-picker-refresh" aria-label="Quét lại ứng dụng" title="Quét lại">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12a9 9 0 1 1-2.64-6.36"></path>
+              <polyline points="21 3 21 9 15 9"></polyline>
+            </svg>
+          </button>
+        </div>
+        <div class="seg-tabs" id="picker-seg-tabs" role="tablist" aria-label="Lọc ứng dụng">
+          <span class="seg-indicator" id="seg-indicator" aria-hidden="true"></span>
+          <button type="button" class="seg-btn active" data-filter="games" data-seg="0" role="tab" aria-selected="true" id="tab-filter-games">Game (0)</button>
+          <button type="button" class="seg-btn" data-filter="all" data-seg="1" role="tab" aria-selected="false" id="tab-filter-all">Tất cả (0)</button>
+          <button type="button" class="seg-btn" data-filter="selected" data-seg="2" role="tab" aria-selected="false" id="tab-filter-selected">Đã chọn (0)</button>
+        </div>
+      </div>
+
+      <div class="picker-list" id="picker-list"></div>
+
+      <div class="modal-foot">
+        <button type="button" class="btn-primary picker-done-btn" id="btn-picker-done">Xong</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLASSMORPHIC FLOATING TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-hidden="true">
+    <span class="toast-dot" aria-hidden="true"></span>
+    <span class="toast-text" id="toast-text"></span>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

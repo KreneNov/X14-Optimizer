@@ -1,0 +1,267 @@
+=== KERNEL & KSU ENVIRONMENT ===
+Linux localhost 6.1.138-android14-11-g0c3d559bcd85-ab14529422 #1 SMP PREEMPT Wed Dec  3 02:05:30 UTC 2025 aarch64 Toybox
+KSU bin:
+total 1830
+drwx------ 2 root root    3452 2026-11-24 16:21 .
+drwx------ 5 root root    3452 2026-11-24 16:22 ..
+-rwxr-xr-x 1 root root  154248 2026-11-24 16:21 bootctl
+-rwxr-xr-x 1 root root 1710600 2026-11-24 16:21 busybox
+lrwxrwxrwx 1 root root      14 2026-11-24 15:13 ksud -> /data/adb/ksud
+lrwxrwxrwx 1 root root      39 2026-11-24 15:15 lspctl -> /data/adb/modules/zygisk_lsposed/lspctl
+lrwxrwxrwx 1 root root      14 2026-11-24 16:21 resetprop -> /data/adb/ksud
+lrwxrwxrwx 1 root root      38 2026-11-24 15:14 znctl -> /data/adb/modules/zygisksu/bin/zygiskd
+SoC:
+soc_id = 557
+family = Snapdragon
+machine = PINEAPPLE
+
+=== CPUFREQ POLICIES ===
+
+--- policy0 ---
+related_cpus = 0 1
+affected_cpus = 0 1
+scaling_available_governors = walt conservative powersave performance schedutil 
+scaling_available_frequencies = 364800 460800 556800 672000 787200 902400 1017600 1132800 1248000 1344000 1459200 1574400 1689600 1804800 1920000 2035200 2150400 2265600 
+scaling_governor = walt
+scaling_min_freq = 2265600
+scaling_max_freq = 2265600
+cpuinfo_min_freq = 364800
+cpuinfo_max_freq = 2265600
+scaling_cur_freq = 2265600
+  [walt params]:
+    adaptive_high_freq = 0
+    adaptive_low_freq = 0
+    boost = 0
+    down_rate_limit_us = 0
+    hispeed_freq = 1344000
+    hispeed_load = 90
+    pl = 1
+    rtg_boost_freq = 1000000
+    target_load_shift = 4
+    target_load_thresh = 1024
+    target_loads = 0
+    up_rate_limit_us = 0
+
+--- policy2 ---
+related_cpus = 2 3 4
+affected_cpus = 2 3 4
+scaling_available_governors = walt conservative powersave performance schedutil 
+scaling_available_frequencies = 499200 614400 729600 844800 960000 1075200 1190400 1286400 1401600 1497600 1612800 1708800 1824000 1920000 2035200 2131200 2188800 2246400 2323200 2380800 2438400 2515200 2572800 2630400 2707200 2764800 2841600 2899200 2956800 3014400 3072000 3148800 
+scaling_governor = walt
+scaling_min_freq = 614400
+scaling_max_freq = 2630400
+cpuinfo_min_freq = 499200
+cpuinfo_max_freq = 3148800
+scaling_cur_freq = 614400
+  [walt params]:
+    adaptive_high_freq = 0
+    adaptive_low_freq = 0
+    boost = 0
+    down_rate_limit_us = 0
+    hispeed_freq = 1612800
+    hispeed_load = 90
+    pl = 1
+    rtg_boost_freq = 844800
+    target_load_shift = 4
+    target_load_thresh = 1024
+    target_loads = 0
+    up_rate_limit_us = 0
+
+--- policy5 ---
+related_cpus = 5 6
+affected_cpus = 5 6
+scaling_available_governors = walt conservative powersave performance schedutil 
+scaling_available_frequencies = 499200 614400 729600 844800 960000 1075200 1190400 1286400 1401600 1497600 1612800 1708800 1824000 1920000 2035200 2131200 2188800 2246400 2323200 2380800 2438400 2515200 2572800 2630400 2707200 2764800 2841600 2899200 2956800 
+scaling_governor = walt
+scaling_min_freq = 499200
+scaling_max_freq = 2630400
+cpuinfo_min_freq = 499200
+cpuinfo_max_freq = 2956800
+scaling_cur_freq = 960000
+  [walt params]:
+    adaptive_high_freq = 0
+    adaptive_low_freq = 0
+    boost = 0
+    down_rate_limit_us = 0
+    hispeed_freq = 1612800
+    hispeed_load = 90
+    pl = 1
+    rtg_boost_freq = 844800
+    target_load_shift = 4
+    target_load_thresh = 1024
+    target_loads = 0
+    up_rate_limit_us = 0
+
+--- policy7 ---
+related_cpus = 7
+affected_cpus = 7
+scaling_available_governors = walt conservative powersave performance schedutil 
+scaling_available_frequencies = 480000 576000 672000 787200 902400 1017600 1132800 1248000 1363200 1478400 1593600 1708800 1824000 1939200 2035200 2112000 2169600 2246400 2304000 2380800 2438400 2496000 2553600 2630400 2688000 2745600 2803200 2880000 2937600 2995200 3052800 
+scaling_governor = walt
+scaling_min_freq = 672000
+scaling_max_freq = 2169600
+cpuinfo_min_freq = 480000
+cpuinfo_max_freq = 3302400
+scaling_cur_freq = 672000
+  [walt params]:
+    adaptive_high_freq = 0
+    adaptive_low_freq = 0
+    boost = 0
+    down_rate_limit_us = 0
+    hispeed_freq = 1593600
+    hispeed_load = 90
+    pl = 1
+    rtg_boost_freq = 902400
+    target_load_shift = 4
+    target_load_thresh = 1024
+    target_loads = 0
+    up_rate_limit_us = 0
+
+=== GPU (/sys/class/kgsl/kgsl-3d0) ===
+total 0
+drwxr-xr-x 4 root root     0 1970-01-01 08:19 .
+drwxr-xr-x 3 root root     0 2026-11-24 15:30 ..
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 acd
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 bcl
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 bus_split
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 clock_mhz
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 clx
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 default_pwrlevel
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 dev
+lrwxrwxrwx 1 root root     0 1970-01-01 08:19 devfreq -> ../../devfreq/3d00000.qcom,kgsl-3d0
+lrwxrwxrwx 1 root root     0 1970-01-01 08:19 device -> ../../../3d00000.qcom,kgsl-3d0
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 dms
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 force_bus_on
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 force_clk_on
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 force_no_nap
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 force_rail_on
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 freq_table_mhz
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 ft_hang_intr_status
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 ft_long_ib_detect
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 ft_pagefault_policy
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 ft_policy
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 gmu_ab
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 gpu_available_frequencies
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 gpu_busy_percentage
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 gpu_clock_stats
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 gpu_llc_slice_enable
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 gpu_model
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 gpubusy
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 gpuclk
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 gpuhtw_llc_slice_enable
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 hwcg
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 idle_timer
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 ifpc
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 ifpc_count
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 l3_vote
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 lm
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 lpac
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 max_clock_mhz
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 max_gpuclk
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 max_pwrlevel
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 min_clock_mhz
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 min_pwrlevel
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 minbw_timer
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 num_pwrlevels
+-rw-rw---- 1 root shell 4096 1970-01-01 08:19 perfcounter
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 popp
+drwxr-xr-x 2 root root     0 1970-01-01 08:19 power
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 preempt_count
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 preemption
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 pwrscale
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 reset_count
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 rt_bus_hint
+drwxr-xr-x 2 root root     0 1970-01-01 08:19 snapshot
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 sptp_pc
+lrwxrwxrwx 1 root root     0 1970-01-01 08:19 subsystem -> ../../../../../../class/kgsl
+-r--r--r-- 1 root root  4096 1970-01-01 08:19 temp
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 thermal_pwrlevel
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 throttling
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 touch_wake
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 uevent
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 wake_nice
+-rw-r--r-- 1 root root  4096 1970-01-01 08:19 wake_timeout
+--- GPU VALUES ---
+gpu_model = Adreno750v2
+gpu_available_frequencies = 903000000 834000000 770000000 720000000 680000000 629000000 578000000 500000000 422000000 366000000 310000000 231000000 
+clock_mhz = 231
+min_clock_mhz = 231
+max_clock_mhz = 770
+gpuclk = 231000000
+min_pwrlevel = 11
+max_pwrlevel = 0
+default_pwrlevel = 11
+thermal_pwrlevel = 2
+throttling = 0
+bus_split = 1
+force_clk_on = 0
+force_rail_on = 0
+force_bus_on = 0
+max_gpuclk = 770000000
+num_pwrlevels = 12
+--- GPU DEVFREQ ---
+total 0
+drwxr-xr-x 3 root root    0 1970-01-01 08:19 .
+drwxr-xr-x 3 root root    0 2026-11-24 15:30 ..
+-r--r--r-- 1 root root 4096 1970-01-01 08:19 available_frequencies
+-r--r--r-- 1 root root 4096 1970-01-01 08:19 available_governors
+-r--r--r-- 1 root root 4096 1970-01-01 08:19 cur_freq
+lrwxrwxrwx 1 root root    0 1970-01-01 08:19 device -> ../../../3d00000.qcom,kgsl-3d0
+-rw-r--r-- 1 root root 4096 1970-01-01 08:19 governor
+-r--r--r-- 1 root root 4096 1970-01-01 08:19 gpu_load
+-rw-r--r-- 1 root root 4096 1970-01-01 08:19 max_freq
+-rw-r--r-- 1 root root 4096 1970-01-01 08:19 min_freq
+-rw-r--r-- 1 root root 4096 1970-01-01 08:19 mod_percent
+-r--r--r-- 1 root root 4096 1970-01-01 08:19 name
+drwxr-xr-x 2 root root    0 1970-01-01 08:19 power
+lrwxrwxrwx 1 root root    0 1970-01-01 08:19 subsystem -> ../../../../../../class/devfreq
+-r--r--r-- 1 root root 4096 1970-01-01 08:19 suspend_time
+-r--r--r-- 1 root root 4096 1970-01-01 08:19 target_freq
+-rw-r--r-- 1 root root 4096 1970-01-01 08:19 trans_stat
+-rw-r--r-- 1 root root 4096 1970-01-01 08:19 uevent
+available_governors = msm-adreno-tz
+governor = msm-adreno-tz
+available_frequencies = 903000000 834000000 770000000 720000000 680000000 629000000 578000000 500000000 422000000 366000000 310000000 231000000
+cur_freq = 231000000
+min_freq = 231000000
+max_freq = 770000000
+
+=== DISPLAY / SCREEN STATE SYSFS ===
+/sys/class/backlight:
+total 0
+drwxr-xr-x   2 root root 0 2026-11-24 15:30 .
+drwxr-xr-x 144 root root 0 1970-01-01 08:19 ..
+lrwxrwxrwx   1 root root 0 2026-11-24 15:30 panel0-backlight -> ../../devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight
+
+/sys/class/mi_display:
+total 0
+drwxr-xr-x   2 root root 0 2026-11-24 15:30 .
+drwxr-xr-x 144 root root 0 1970-01-01 08:19 ..
+lrwxrwxrwx   1 root root 0 2026-11-24 15:30 disp-DSI-0 -> ../../devices/virtual/mi_display/disp_feature/disp-DSI-0
+lrwxrwxrwx   1 root root 0 2026-11-24 16:29 disp_feature -> ../../devices/virtual/mi_display/disp_feature
+lrwxrwxrwx   1 root root 0 2026-11-24 16:29 disp_log -> ../../devices/virtual/mi_display/disp_log
+total 0
+drwxr-xr-x 3 root   root      0 1970-01-01 08:19 .
+drwxr-xr-x 4 root   root      0 1970-01-01 08:19 ..
+-rw-rw-r-- 1 system system 4096 1970-01-01 08:19 brightness_clone
+-r--r--r-- 1 root   root   4096 1970-01-01 08:19 cell_id
+lrwxrwxrwx 1 root   root      0 1970-01-01 08:19 device -> ../../disp_feature
+-rw-rw-r-- 1 system system 4096 1970-01-01 08:19 disp_count
+-rw-rw-r-- 1 system system 4096 1970-01-01 08:19 disp_param
+-rw-rw-r-- 1 system system 4096 1970-01-01 08:19 doze_brightness
+-r--r--r-- 1 system system 4096 1970-01-01 08:19 dynamic_fps
+-r--r--r-- 1 root   root   4096 1970-01-01 08:19 flatmode_check
+-r--r--r-- 1 root   root   4096 1970-01-01 08:19 hw_vsync_info
+-rw-rw-r-- 1 system system 4096 1970-01-01 08:19 max_brightness_clone
+-rw-rw-r-- 1 system system 4096 1970-01-01 08:19 mipi_rw
+-r--r--r-- 1 system system 4096 1970-01-01 08:19 panel_build_id
+-r--r--r-- 1 system system 4096 1970-01-01 08:19 panel_info
+drwxr-xr-x 2 root   root      0 1970-01-01 08:19 power
+lrwxrwxrwx 1 root   root      0 1970-01-01 08:19 subsystem -> ../../../../../class/mi_display
+-rw-r--r-- 1 root   root   4096 1970-01-01 08:19 uevent
+-r--r--r-- 1 system system 4096 1970-01-01 08:19 wp_info
+dynamic_fps = 120
+brightness_clone = 3232
+doze_brightness = 0
+panel_info = panel_name=mdss_dsi_n3_42_0d_0a_dsc_cmd
+backlight /sys/class/backlight/panel0-backlight: brightness=825 max=4095 bl_power=0

@@ -1,0 +1,368 @@
+=== THERMAL ZONES (/sys/class/thermal/thermal_zone*) ===
+thermal_zone0      | type=aoss-0                           | temp=35800    | mode=enabled
+thermal_zone1      | type=cpuss-0                          | temp=37400    | mode=enabled
+thermal_zone10     | type=cpu-2-2-1                        | temp=37700    | mode=enabled
+thermal_zone100    | type=mmw1                             | temp=-273000  | mode=enabled
+thermal_zone101    | type=mmw2                             | temp=-273000  | mode=enabled
+thermal_zone11     | type=cpu-1-0-0                        | temp=37700    | mode=enabled
+thermal_zone12     | type=cpu-1-0-1                        | temp=38100    | mode=enabled
+thermal_zone13     | type=cpu-1-1-0                        | temp=37400    | mode=enabled
+thermal_zone14     | type=cpu-1-1-1                        | temp=37400    | mode=enabled
+thermal_zone15     | type=aoss-1                           | temp=37200    | mode=enabled
+thermal_zone16     | type=cpu-1-2-0                        | temp=37200    | mode=enabled
+thermal_zone17     | type=cpu-1-2-1                        | temp=36800    | mode=enabled
+thermal_zone18     | type=cpu-1-2-2                        | temp=38000    | mode=enabled
+thermal_zone19     | type=cpu-0-0-0                        | temp=38700    | mode=enabled
+thermal_zone2      | type=cpuss-1                          | temp=37000    | mode=enabled
+thermal_zone20     | type=cpu-0-1-0                        | temp=37600    | mode=enabled
+thermal_zone21     | type=nsphvx-0                         | temp=36800    | mode=enabled
+thermal_zone22     | type=nsphvx-1                         | temp=37200    | mode=enabled
+thermal_zone23     | type=nsphmx-0                         | temp=36800    | mode=enabled
+thermal_zone24     | type=nsphmx-1                         | temp=36400    | mode=enabled
+thermal_zone25     | type=nsphmx-2                         | temp=36400    | mode=enabled
+thermal_zone26     | type=nsphmx-3                         | temp=37200    | mode=enabled
+thermal_zone27     | type=video                            | temp=37200    | mode=enabled
+thermal_zone28     | type=ddr                              | temp=36800    | mode=enabled
+thermal_zone29     | type=camera-0                         | temp=36000    | mode=enabled
+thermal_zone3      | type=cpuss-2                          | temp=37400    | mode=enabled
+thermal_zone30     | type=camera-1                         | temp=36000    | mode=enabled
+thermal_zone31     | type=aoss-2                           | temp=35600    | mode=enabled
+thermal_zone32     | type=gpuss-0                          | temp=35200    | mode=enabled
+thermal_zone33     | type=gpuss-1                          | temp=34900    | mode=enabled
+thermal_zone34     | type=gpuss-2                          | temp=35600    | mode=enabled
+thermal_zone35     | type=gpuss-3                          | temp=34900    | mode=enabled
+thermal_zone36     | type=gpuss-4                          | temp=35600    | mode=enabled
+thermal_zone37     | type=gpuss-5                          | temp=36000    | mode=enabled
+thermal_zone38     | type=gpuss-6                          | temp=35600    | mode=enabled
+thermal_zone39     | type=gpuss-7                          | temp=35200    | mode=enabled
+thermal_zone4      | type=cpuss-3                          | temp=37700    | mode=enabled
+thermal_zone40     | type=mdmss-0                          | temp=35200    | mode=enabled
+thermal_zone41     | type=mdmss-1                          | temp=34900    | mode=enabled
+thermal_zone42     | type=mdmss-2                          | temp=35200    | mode=enabled
+thermal_zone43     | type=mdmss-3                          | temp=35600    | mode=enabled
+thermal_zone44     | type=pm8550-bcl-lvl0                  | temp=0        | mode=enabled
+thermal_zone45     | type=pm8550-bcl-lvl1                  | temp=0        | mode=enabled
+thermal_zone46     | type=pm8550-bcl-lvl2                  | temp=0        | mode=enabled
+thermal_zone47     | type=vbat                             | temp=4285     | mode=enabled
+thermal_zone48     | type=pm8550b-ibat-lvl0                | temp=-656     | mode=enabled
+thermal_zone49     | type=pm8550b-ibat-lvl1                | temp=-750     | mode=enabled
+thermal_zone5      | type=cpu-2-0-0                        | temp=37000    | mode=enabled
+thermal_zone50     | type=pm8550b-bcl-lvl0                 | temp=0        | mode=enabled
+thermal_zone51     | type=pm8550b-bcl-lvl1                 | temp=0        | mode=enabled
+thermal_zone52     | type=pm8550b-bcl-lvl2                 | temp=0        | mode=enabled
+thermal_zone53     | type=socd                             | temp=11       | mode=enabled
+thermal_zone54     | type=pm8010m_tz                       | temp=37000    | mode=enabled
+thermal_zone55     | type=pmr735d_tz                       | temp=37000    | mode=enabled
+thermal_zone56     | type=xo-therm                         | temp=34007    | mode=enabled
+thermal_zone57     | type=cpu_therm                        | temp=35801    | mode=enabled
+thermal_zone58     | type=flash_therm                      | temp=33718    | mode=enabled
+thermal_zone59     | type=wifi_therm                       | temp=34948    | mode=enabled
+thermal_zone6      | type=cpu-2-0-1                        | temp=37000    | mode=enabled
+thermal_zone60     | type=pa_therm0                        | temp=35360    | mode=enabled
+thermal_zone61     | type=wireless_therm                   | temp=35744    | mode=enabled
+thermal_zone62     | type=conn_therm                       | temp=33488    | mode=enabled
+thermal_zone63     | type=charger_therm0                   | temp=35108    | mode=enabled
+thermal_zone64     | type=quiet_therm                      | temp=34372    | mode=enabled
+thermal_zone65     | type=display_therm                    | temp=34135    | mode=enabled
+thermal_zone66     | type=pa_therm1                        | temp=34996    | mode=enabled
+thermal_zone67     | type=pm8550vs_e_tz                    | temp=34796    | mode=enabled
+thermal_zone68     | type=pm8550vs_g_tz                    | temp=34696    | mode=enabled
+thermal_zone69     | type=pm8550_tz                        | temp=37873    | mode=enabled
+thermal_zone7      | type=cpu-2-1-0                        | temp=37000    | mode=enabled
+thermal_zone70     | type=pm8550b_tz                       | temp=34495    | mode=enabled
+thermal_zone71     | type=pm8550b_lite_tz                  | temp=48384    | mode=enabled
+thermal_zone72     | type=pm8550ve_tz                      | temp=36100    | mode=enabled
+thermal_zone73     | type=pm8550vs_c_tz                    | temp=34997    | mode=enabled
+thermal_zone74     | type=pm8550vs_d_tz                    | temp=35130    | mode=enabled
+thermal_zone75     | type=battery                          | temp=31600    | mode=disabled
+thermal_zone76     | type=usb                              | temp=32000    | mode=enabled
+thermal_zone77     | type=wireless                         | temp=33000    | mode=enabled
+thermal_zone78     | type=pa-therm2-sys3                   | temp=34256    | mode=enabled
+thermal_zone79     | type=mmw_pa3                          | temp=27000    | mode=enabled
+thermal_zone8      | type=cpu-2-1-1                        | temp=37000    | mode=enabled
+thermal_zone80     | type=sdr_mmw_therm                    | temp=27000    | mode=enabled
+thermal_zone81     | type=bcl_warn                         | temp=-273000  | mode=enabled
+thermal_zone82     | type=sub1_modem_cfg                   | temp=-273000  | mode=enabled
+thermal_zone83     | type=sub1_lte_cc                      | temp=-273000  | mode=enabled
+thermal_zone84     | type=sub1_mcg_fr1_cc                  | temp=-273000  | mode=enabled
+thermal_zone85     | type=sub1_mcg_fr2_cc                  | temp=-273000  | mode=enabled
+thermal_zone86     | type=sub1_scg_fr1_cc                  | temp=-273000  | mode=enabled
+thermal_zone87     | type=sub1_scg_fr2_cc                  | temp=-273000  | mode=enabled
+thermal_zone88     | type=epm0                             | temp=-273000  | mode=enabled
+thermal_zone89     | type=epm1                             | temp=-273000  | mode=enabled
+thermal_zone9      | type=cpu-2-2-0                        | temp=37000    | mode=enabled
+thermal_zone90     | type=epm2                             | temp=-273000  | mode=enabled
+thermal_zone91     | type=epm3                             | temp=-273000  | mode=enabled
+thermal_zone92     | type=epm4                             | temp=-273000  | mode=enabled
+thermal_zone93     | type=epm5                             | temp=-273000  | mode=enabled
+thermal_zone94     | type=epm6                             | temp=-273000  | mode=enabled
+thermal_zone95     | type=epm7                             | temp=-273000  | mode=enabled
+thermal_zone96     | type=sdr0_pa                          | temp=-273000  | mode=enabled
+thermal_zone97     | type=sdr0                             | temp=37000    | mode=enabled
+thermal_zone98     | type=mmw_ific0                        | temp=37000    | mode=enabled
+thermal_zone99     | type=mmw0                             | temp=-273000  | mode=enabled
+
+=== COOLING DEVICES (/sys/class/thermal/cooling_device*) ===
+cooling_device0      | type=cpu-hotplug7                     | cur=0      | max=1
+cooling_device1      | type=cpu-hotplug5                     | cur=0      | max=1
+cooling_device10     | type=cpufreq-cpu5                     | cur=0      | max=28
+cooling_device11     | type=cpufreq-cpu7                     | cur=0      | max=34
+cooling_device12     | type=pause-cpu0                       | cur=0      | max=1
+cooling_device13     | type=pause-cpu1                       | cur=0      | max=1
+cooling_device14     | type=pause-cpu2                       | cur=0      | max=1
+cooling_device15     | type=pause-cpu3                       | cur=0      | max=1
+cooling_device16     | type=pause-cpu4                       | cur=0      | max=1
+cooling_device17     | type=thermal-pause-2                  | cur=0      | max=1
+cooling_device18     | type=pause-cpu5                       | cur=0      | max=1
+cooling_device19     | type=pause-cpu6                       | cur=0      | max=1
+cooling_device2      | type=cpu-hotplug1                     | cur=0      | max=1
+cooling_device20     | type=thermal-pause-8                  | cur=0      | max=1
+cooling_device21     | type=thermal-pause-1C                 | cur=0      | max=1
+cooling_device22     | type=pause-cpu7                       | cur=0      | max=1
+cooling_device23     | type=thermal-pause-1                  | cur=0      | max=1
+cooling_device24     | type=thermal-pause-4                  | cur=0      | max=1
+cooling_device25     | type=thermal-pause-10                 | cur=0      | max=1
+cooling_device26     | type=thermal-pause-80                 | cur=0      | max=1
+cooling_device27     | type=thermal-pause-E0                 | cur=0      | max=1
+cooling_device28     | type=thermal-pause-20                 | cur=0      | max=1
+cooling_device29     | type=thermal-pause-40                 | cur=0      | max=1
+cooling_device3      | type=cpu-hotplug2                     | cur=0      | max=1
+cooling_device30     | type=ufs1                             | cur=0      | max=2
+cooling_device31     | type=thermal-cluster-2-3              | cur=0      | max=34
+cooling_device32     | type=cpu-cluster0                     | cur=0      | max=17
+cooling_device33     | type=cpu-cluster1                     | cur=0      | max=31
+cooling_device34     | type=cpu-cluster2                     | cur=0      | max=28
+cooling_device35     | type=ddr-cdev                         | cur=0      | max=9
+cooling_device36     | type=cpu-cluster3                     | cur=3      | max=34
+cooling_device37     | type=display-fps                      | cur=0      | max=16
+cooling_device38     | type=gpu-dump-skip-cdev               | cur=0      | max=1
+cooling_device39     | type=panel0-backlight                 | cur=255    | max=255
+cooling_device4      | type=cpu-hotplug6                     | cur=0      | max=1
+cooling_device40     | type=devfreq-3d00000.qcom,kgsl-3d0    | cur=0      | max=11
+cooling_device41     | type=gpu                              | cur=2      | max=11
+cooling_device42     | type=cdsp_hw                          | cur=0      | max=1
+cooling_device43     | type=cdsp                             | cur=0      | max=8
+cooling_device44     | type=cdsp_sw_hvx                      | cur=0      | max=7
+cooling_device45     | type=cdsp_sw_hmx                      | cur=0      | max=5
+cooling_device46     | type=battery                          | cur=5      | max=16
+cooling_device47     | type=modem_vdd                        | cur=0      | max=1
+cooling_device48     | type=modem_lte_dsc                    | cur=0      | max=255
+cooling_device49     | type=modem_lte_sub1_dsc               | cur=0      | max=255
+cooling_device5      | type=cpu-hotplug4                     | cur=0      | max=1
+cooling_device50     | type=modem_nr_dsc                     | cur=0      | max=255
+cooling_device51     | type=modem_nr_sub1_dsc                | cur=0      | max=255
+cooling_device52     | type=modem_nr_scg_dsc                 | cur=0      | max=255
+cooling_device53     | type=modem_nr_scg_sub1_dsc            | cur=0      | max=255
+cooling_device54     | type=sdr0_lte_dsc                     | cur=0      | max=255
+cooling_device55     | type=sdr0_nr_dsc                      | cur=0      | max=255
+cooling_device56     | type=pa_lte_sdr0_dsc                  | cur=0      | max=255
+cooling_device57     | type=pa_lte_sdr0_sub1_dsc             | cur=0      | max=255
+cooling_device58     | type=pa_nr_sdr0_dsc                   | cur=0      | max=255
+cooling_device59     | type=pa_nr_sdr0_sub1_dsc              | cur=0      | max=255
+cooling_device6      | type=cpu-hotplug3                     | cur=0      | max=1
+cooling_device60     | type=pa_nr_sdr0_scg_dsc               | cur=0      | max=255
+cooling_device61     | type=pa_nr_sdr0_scg_sub1_dsc          | cur=0      | max=255
+cooling_device62     | type=mmw0_dsc                         | cur=0      | max=255
+cooling_device63     | type=mmw0_sub1_dsc                    | cur=0      | max=255
+cooling_device64     | type=mmw1_dsc                         | cur=0      | max=255
+cooling_device65     | type=mmw1_sub1_dsc                    | cur=0      | max=255
+cooling_device66     | type=mmw2_dsc                         | cur=0      | max=255
+cooling_device67     | type=mmw2_sub1_dsc                    | cur=0      | max=255
+cooling_device68     | type=mmw3_dsc                         | cur=0      | max=255
+cooling_device69     | type=mmw3_sub1_dsc                    | cur=0      | max=255
+cooling_device7      | type=cpu-hotplug0                     | cur=0      | max=1
+cooling_device70     | type=wlan                             | cur=0      | max=4
+cooling_device71     | type=modem_bw_backoff                 | cur=0      | max=255
+cooling_device72     | type=modem_bcl                        | cur=0      | max=255
+cooling_device8      | type=cpufreq-cpu0                     | cur=0      | max=17
+cooling_device9      | type=cpufreq-cpu2                     | cur=0      | max=31
+
+=== /sys/class/thermal/thermal_message (Xiaomi mi_thermald) ===
+total 0
+drwxr-xr-x   3 root         root            0 1970-01-01 08:19 .
+drwxr-xr-x 179 root         root            0 1970-01-01 08:19 ..
+-rw-rw-r--   1 root         root         4096 2026-11-24 16:29 ambient_sensor
+-rw-rw-r--   1 root         root         4096 2026-11-24 15:30 ambient_sensor_temp
+-rw-rw-r--   1 system       system       4096 2026-11-24 15:31 balance_mode
+-rw-rw-r--   1 root         root         4096 2026-11-24 16:29 board_sensor
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 board_sensor_other_temp
+-rw-rw-r--   1 root         root         4096 2026-11-24 16:29 board_sensor_second_temp
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 board_sensor_temp
+-rw-rw-r--   1 system       system       4096 2026-11-24 15:29 board_sensor_temp_comp
+-rw-rw-rw-   1 root         root         4096 1970-01-01 08:19 boost
+-rw-rw-r--   1 root         root         4096 2026-11-24 15:30 boot_complete
+-rw-rw-r--   1 system       system       4096 2026-11-24 15:30 charger_temp
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 cpu_limits
+-rw-rw-r--   1 system       system       4096 2026-11-24 15:29 cpu_nolimit_temp
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 display_therm_temp
+-rw-rw-r--   1 cameraserver cameraserver 4096 1970-01-01 08:19 flash_state
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 market_download_limit
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 modem_level
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 modem_limit
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 ntn_limit
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 poor_modem_limit
+drwxr-xr-x   2 root         root            0 2026-11-24 16:29 power
+-rw-rw-r--   1 system       system       4096 2026-11-24 15:29 sconfig
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 screen_state
+lrwxrwxrwx   1 root         root            0 2026-11-24 16:29 subsystem -> ../../../../class/thermal
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 temp_state
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 thermal_max_brightness
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 torch_level
+-rw-rw-r--   1 cameraserver cameraserver 4096 1970-01-01 08:19 torch_real_level
+-rw-r--r--   1 root         root         4096 2026-11-24 16:29 uevent
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 usb_online
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 voice_limit
+-rw-rw-r--   1 root         root         4096 1970-01-01 08:19 wifi_limit
+--- VALUES ---
+ambient_sensor = ABT-SENSOR
+ambient_sensor_temp = 
+balance_mode = 2
+board_sensor = VIRTUAL-SENSOR0
+board_sensor_other_temp = 32950
+board_sensor_second_temp = 
+board_sensor_temp = 32950
+board_sensor_temp_comp = 0
+boost = boost:0
+boot_complete = 2
+charger_temp = 8
+cpu_limits = 
+cpu_nolimit_temp = 0
+display_therm_temp = 34112
+flash_state = 0
+market_download_limit = 0
+modem_level = 0
+modem_limit = 0
+ntn_limit = 0
+poor_modem_limit = 0
+sconfig = -1
+screen_state = 1
+temp_state = 0
+thermal_max_brightness = 0
+torch_level = 0
+torch_real_level = -1
+uevent = 
+usb_online = 1
+voice_limit = 0
+wifi_limit = 0
+
+=== THERMAL CONFIG FILES ===
+
+-rw-r--r-- 1 root root   3600 2026-09-12 11:59 /odm/etc/thermal-4k-newcharger.conf
+-rw-r--r-- 1 root root   3216 2026-09-12 11:59 /odm/etc/thermal-4k.conf
+-rw-r--r-- 1 root root   3440 2026-09-12 11:59 /odm/etc/thermal-arvr-newcharger.conf
+-rw-r--r-- 1 root root   3072 2026-09-12 11:59 /odm/etc/thermal-arvr.conf
+-rw-r--r-- 1 root root   3680 2026-09-12 11:59 /odm/etc/thermal-camera-newcharger.conf
+-rw-r--r-- 1 root root   3280 2026-09-12 11:59 /odm/etc/thermal-camera.conf
+-rw-r--r-- 1 root root   4832 2026-09-12 11:59 /odm/etc/thermal-cclassvideo-newcharger.conf
+-rw-r--r-- 1 root root   4416 2026-09-12 11:59 /odm/etc/thermal-cclassvideo.conf
+-rw-r--r-- 1 root root   3616 2026-09-12 11:59 /odm/etc/thermal-cgame-newcharger.conf
+-rw-r--r-- 1 root root   3216 2026-09-12 11:59 /odm/etc/thermal-cgame.conf
+-rw-r--r-- 1 root root   3409 2026-09-12 11:59 /odm/etc/thermal-chg-only.conf
+-rw-r--r-- 1 root root   4480 2026-09-12 11:59 /odm/etc/thermal-class0-newcharger.conf
+-rw-r--r-- 1 root root   4080 2026-09-12 11:59 /odm/etc/thermal-class0.conf
+-rw-r--r-- 1 root root   3216 2026-09-12 11:59 /odm/etc/thermal-demo-ind-4k.conf
+-rw-r--r-- 1 root root   3088 2026-09-12 11:59 /odm/etc/thermal-demo-ind-arvr.conf
+-rw-r--r-- 1 root root   3296 2026-09-12 11:59 /odm/etc/thermal-demo-ind-camera.conf
+-rw-r--r-- 1 root root   4384 2026-09-12 11:59 /odm/etc/thermal-demo-ind-cclassvideo.conf
+-rw-r--r-- 1 root root   3216 2026-09-12 11:59 /odm/etc/thermal-demo-ind-cgame.conf
+-rw-r--r-- 1 root root   4336 2026-09-12 11:59 /odm/etc/thermal-demo-ind-class0.conf
+-rw-r--r-- 1 root root   3456 2026-09-12 11:59 /odm/etc/thermal-demo-ind-hp-mgame.conf
+-rw-r--r-- 1 root root   4528 2026-09-12 11:59 /odm/etc/thermal-demo-ind-hp-normal.conf
+-rw-r--r-- 1 root root   2976 2026-09-12 11:59 /odm/etc/thermal-demo-ind-huanji.conf
+-rw-r--r-- 1 root root   2976 2026-09-12 11:59 /odm/etc/thermal-demo-ind-mgame.conf
+-rw-r--r-- 1 root root   3392 2026-09-12 11:59 /odm/etc/thermal-demo-ind-navigation.conf
+-rw-r--r-- 1 root root   2352 2026-09-12 11:59 /odm/etc/thermal-demo-ind-nolimits.conf
+-rw-r--r-- 1 root root   5200 2026-09-12 11:59 /odm/etc/thermal-demo-ind-normal.conf
+-rw-r--r-- 1 root root   4288 2026-09-12 11:59 /odm/etc/thermal-demo-ind-per-class0.conf
+-rw-r--r-- 1 root root   5072 2026-09-12 11:59 /odm/etc/thermal-demo-ind-per-normal.conf
+-rw-r--r-- 1 root root   4416 2026-09-12 11:59 /odm/etc/thermal-demo-ind-per-video.conf
+-rw-r--r-- 1 root root   2960 2026-09-12 11:59 /odm/etc/thermal-demo-ind-phone.conf
+-rw-r--r-- 1 root root   2992 2026-09-12 11:59 /odm/etc/thermal-demo-ind-tgame.conf
+-rw-r--r-- 1 root root   4448 2026-09-12 11:59 /odm/etc/thermal-demo-ind-video.conf
+-rw-r--r-- 1 root root   3568 2026-09-12 11:59 /odm/etc/thermal-demo-ind-videochat.conf
+-rw-r--r-- 1 root root   3264 2026-09-12 11:59 /odm/etc/thermal-gl-4k.conf
+-rw-r--r-- 1 root root   3120 2026-09-12 11:59 /odm/etc/thermal-gl-arvr.conf
+-rw-r--r-- 1 root root   3344 2026-09-12 11:59 /odm/etc/thermal-gl-camera.conf
+-rw-r--r-- 1 root root   4480 2026-09-12 11:59 /odm/etc/thermal-gl-cclassvideo.conf
+-rw-r--r-- 1 root root   3264 2026-09-12 11:59 /odm/etc/thermal-gl-cgame.conf
+-rw-r--r-- 1 root root   4144 2026-09-12 11:59 /odm/etc/thermal-gl-class0.conf
+-rw-r--r-- 1 root root   3504 2026-09-12 11:59 /odm/etc/thermal-gl-hp-mgame.conf
+-rw-r--r-- 1 root root   4608 2026-09-12 11:59 /odm/etc/thermal-gl-hp-normal.conf
+-rw-r--r-- 1 root root   2928 2026-09-12 11:59 /odm/etc/thermal-gl-huanji.conf
+-rw-r--r-- 1 root root   2784 2026-09-12 11:59 /odm/etc/thermal-gl-mgame.conf
+-rw-r--r-- 1 root root   3376 2026-09-12 11:59 /odm/etc/thermal-gl-navigation.conf
+-rw-r--r-- 1 root root   2176 2026-09-12 11:59 /odm/etc/thermal-gl-nolimits.conf
+-rw-r--r-- 1 root root   5280 2026-09-12 11:59 /odm/etc/thermal-gl-normal.conf
+-rw-r--r-- 1 root root   4080 2026-09-12 11:59 /odm/etc/thermal-gl-per-class0.conf
+-rw-r--r-- 1 root root   5152 2026-09-12 11:59 /odm/etc/thermal-gl-per-normal.conf
+-rw-r--r-- 1 root root   4208 2026-09-12 11:59 /odm/etc/thermal-gl-per-video.conf
+-rw-r--r-- 1 root root   2912 2026-09-12 11:59 /odm/etc/thermal-gl-phone.conf
+-rw-r--r-- 1 root root   2784 2026-09-12 11:59 /odm/etc/thermal-gl-tgame.conf
+-rw-r--r-- 1 root root   4240 2026-09-12 11:59 /odm/etc/thermal-gl-video.conf
+-rw-r--r-- 1 root root   3616 2026-09-12 11:59 /odm/etc/thermal-gl-videochat.conf
+-rw-r--r-- 1 root root   3872 2026-09-12 11:59 /odm/etc/thermal-hp-mgame-newcharger.conf
+-rw-r--r-- 1 root root   3440 2026-09-12 11:59 /odm/etc/thermal-hp-mgame.conf
+-rw-r--r-- 1 root root   4960 2026-09-12 11:59 /odm/etc/thermal-hp-normal-newcharger.conf
+-rw-r--r-- 1 root root   4544 2026-09-12 11:59 /odm/etc/thermal-hp-normal.conf
+-rw-r--r-- 1 root root   3264 2026-09-12 11:59 /odm/etc/thermal-huanji-newcharger.conf
+-rw-r--r-- 1 root root   2864 2026-09-12 11:59 /odm/etc/thermal-huanji.conf
+-rw-r--r-- 1 root root   3296 2026-09-12 11:59 /odm/etc/thermal-ind-4k.conf
+-rw-r--r-- 1 root root   3136 2026-09-12 11:59 /odm/etc/thermal-ind-arvr.conf
+-rw-r--r-- 1 root root   3360 2026-09-12 11:59 /odm/etc/thermal-ind-camera.conf
+-rw-r--r-- 1 root root   4496 2026-09-12 11:59 /odm/etc/thermal-ind-cclassvideo.conf
+-rw-r--r-- 1 root root   3280 2026-09-12 11:59 /odm/etc/thermal-ind-cgame.conf
+-rw-r--r-- 1 root root   4160 2026-09-12 11:59 /odm/etc/thermal-ind-class0.conf
+-rw-r--r-- 1 root root   3520 2026-09-12 11:59 /odm/etc/thermal-ind-hp-mgame.conf
+-rw-r--r-- 1 root root   4624 2026-09-12 11:59 /odm/etc/thermal-ind-hp-normal.conf
+-rw-r--r-- 1 root root   2944 2026-09-12 11:59 /odm/etc/thermal-ind-huanji.conf
+-rw-r--r-- 1 root root   2800 2026-09-12 11:59 /odm/etc/thermal-ind-mgame.conf
+-rw-r--r-- 1 root root   3392 2026-09-12 11:59 /odm/etc/thermal-ind-navigation.conf
+-rw-r--r-- 1 root root   2176 2026-09-12 11:59 /odm/etc/thermal-ind-nolimits.conf
+-rw-r--r-- 1 root root   5312 2026-09-12 11:59 /odm/etc/thermal-ind-normal.conf
+-rw-r--r-- 1 root root   4096 2026-09-12 11:59 /odm/etc/thermal-ind-per-class0.conf
+-rw-r--r-- 1 root root   5184 2026-09-12 11:59 /odm/etc/thermal-ind-per-normal.conf
+-rw-r--r-- 1 root root   4224 2026-09-12 11:59 /odm/etc/thermal-ind-per-video.conf
+-rw-r--r-- 1 root root   2928 2026-09-12 11:59 /odm/etc/thermal-ind-phone.conf
+-rw-r--r-- 1 root root   2800 2026-09-12 11:59 /odm/etc/thermal-ind-tgame.conf
+-rw-r--r-- 1 root root   4272 2026-09-12 11:59 /odm/etc/thermal-ind-video.conf
+-rw-r--r-- 1 root root   3632 2026-09-12 11:59 /odm/etc/thermal-ind-videochat.conf
+-rw-r--r-- 1 root root   8400 2026-09-12 11:59 /odm/etc/thermal-map-gl.conf
+-rw-r--r-- 1 root root   9216 2026-09-12 11:59 /odm/etc/thermal-map-ind.conf
+-rw-r--r-- 1 root root   3136 2026-09-12 11:59 /odm/etc/thermal-mgame-newcharger.conf
+-rw-r--r-- 1 root root   2736 2026-09-12 11:59 /odm/etc/thermal-mgame.conf
+-rw-r--r-- 1 root root   3728 2026-09-12 11:59 /odm/etc/thermal-navigation-newcharger.conf
+-rw-r--r-- 1 root root   3312 2026-09-12 11:59 /odm/etc/thermal-navigation.conf
+-rw-r--r-- 1 root root   2240 2026-09-12 11:59 /odm/etc/thermal-nolimits-newcharger.conf
+-rw-r--r-- 1 root root   2128 2026-09-12 11:59 /odm/etc/thermal-nolimits.conf
+-rw-r--r-- 1 root root   6160 2026-09-12 11:59 /odm/etc/thermal-normal-newcharger.conf
+-rw-r--r-- 1 root root   5712 2026-09-12 11:59 /odm/etc/thermal-normal.conf
+-rw-r--r-- 1 root root   5584 2026-09-12 11:59 /odm/etc/thermal-odm-map.conf
+-rw-r--r-- 1 root root   4432 2026-09-12 11:59 /odm/etc/thermal-per-class0-newcharger.conf
+-rw-r--r-- 1 root root   4016 2026-09-12 11:59 /odm/etc/thermal-per-class0.conf
+-rw-r--r-- 1 root root   6048 2026-09-12 11:59 /odm/etc/thermal-per-normal-newcharger.conf
+-rw-r--r-- 1 root root   5600 2026-09-12 11:59 /odm/etc/thermal-per-normal.conf
+-rw-r--r-- 1 root root   4560 2026-09-12 11:59 /odm/etc/thermal-per-video-newcharger.conf
+-rw-r--r-- 1 root root   4144 2026-09-12 11:59 /odm/etc/thermal-per-video.conf
+-rw-r--r-- 1 root root   3248 2026-09-12 11:59 /odm/etc/thermal-phone-newcharger.conf
+-rw-r--r-- 1 root root   2848 2026-09-12 11:59 /odm/etc/thermal-phone.conf
+-rw-r--r-- 1 root root    224 2026-09-12 11:59 /odm/etc/thermal-region-map.conf
+-rw-r--r-- 1 root root   3136 2026-09-12 11:59 /odm/etc/thermal-tgame-newcharger.conf
+-rw-r--r-- 1 root root   2736 2026-09-12 11:59 /odm/etc/thermal-tgame.conf
+-rw-r--r-- 1 root root   4592 2026-09-12 11:59 /odm/etc/thermal-video-newcharger.conf
+-rw-r--r-- 1 root root   4192 2026-09-12 11:59 /odm/etc/thermal-video.conf
+-rw-r--r-- 1 root root   3968 2026-09-12 11:59 /odm/etc/thermal-videochat-newcharger.conf
+-rw-r--r-- 1 root root   3552 2026-09-12 11:59 /odm/etc/thermal-videochat.conf
+-rw-r--r-- 1 root root     84 2026-09-12 11:59 /vendor/etc/thermal-engine.conf
+-rw-r--r-- 1 root root   4176 2026-09-12 11:59 /vendor/etc/thermal-map.conf
+-rw-r--r-- 1 root root   3301 2026-09-12 11:59 /vendor/etc/thermald-devices.conf
+
+/data/vendor/thermal:
+total 181
+drwxrwx--x  3 root   system  3452 2026-11-24 15:30 .
+drwxrwx--x 84 root   root    3452 1970-01-01 22:28 ..
+drwxrwx--x  2 root   system  3452 1970-01-01 22:28 config
+-rw-------  1 root   system  5707 2026-11-24 15:30 decrypt.txt
+-rw-r--r--  1 system system 68266 2026-11-24 15:28 last_thermal.dump
+-rw-rw-r--  1 system system     0 2026-11-24 15:30 report.dump
+-rw-rw-r--  1 system system     1 1970-01-01 22:28 thermal-global-mode
+-rw-r--r--  1 system system 91296 2026-11-24 16:16 thermal.dump
